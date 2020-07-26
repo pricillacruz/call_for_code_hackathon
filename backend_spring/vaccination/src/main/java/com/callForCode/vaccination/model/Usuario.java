@@ -32,7 +32,8 @@ public class Usuario {
 
 	@Column(name = "cpf_usuario", nullable = false, unique = true)
 	@Size(min = 11, max = 11)
-	@CPF
+	//essa anotação @CPF aceita apenas CPFs existentes
+	//@CPF
 	private String cpf_usuario;
 
 	@Column(name = "email_usuario", nullable = false, unique = true)
