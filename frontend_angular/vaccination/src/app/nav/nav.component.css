@@ -8,8 +8,10 @@ nav {
 #navLogo{
     width: 30%;
     height: auto;
+    max-width: 250px;
 }
 #navMenu{
-    width: 10%;
+    width: 100%;
     height: auto;
+    max-width: 50px;
 }

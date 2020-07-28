@@ -14,11 +14,13 @@ header {
 #imgPlaneta {
     width: 50%;
     height: auto;
+    max-width: 230px;
 }
 #logoHome {
     width: 70%;
     height: auto;
     min-width: 264px;
+    max-width: 490px;
 }
 #textoHeader {
     font-size: 20px;
@@ -27,4 +29,22 @@ header {
 #janetHome {
     height: 185px;
     width: 185px;
+}
+
+@media (min-width : 960px){
+    #textoHeader {
+        font-size: 40px;
+    }
+    .botaoPreto {
+        min-width: 350px !important;
+    }
+    .botaoBranco {
+        min-width: 350px !important;
+    }
+    .botaoAzul {
+        min-width: 350px !important;
+    }
+    #textoMain{
+        font-size: 40px;
+    }
 }
