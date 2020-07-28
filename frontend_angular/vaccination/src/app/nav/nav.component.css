@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+}
+nav {
+    height: 10vh;
+    background-color: #BAE2D9;
+}
+#navLogo{
+    width: 30%;
+    height: auto;
+}
+#navMenu{
+    width: 10%;
+    height: auto;
+}

@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+.bg-azul-claro {
+    background-color: #B4E2D9;
+}
+.bg-cinza-escuro{
+    background-color: #2a2828;
+}
+
+.texto-branco {
+    color: white;
+}
+.font-roboto{
+    font-family: 'Roboto', sans-serif;
+}
