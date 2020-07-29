@@ -124,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "vaccination"
+    }
+  },
+  "defaultProject": "vaccination",
+  "cli": {
+    "analytics": false
+  }
 }
