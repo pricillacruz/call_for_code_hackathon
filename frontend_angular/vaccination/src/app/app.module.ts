@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NavComponent } from './nav/nav.component';
 import { AdminComponent } from './admin/admin.component';
 import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.component';
+import { PontoAtendimentoComponent } from './ponto-atendimento/ponto-atendimento.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.componen
     FooterComponent,
     NavComponent,
     AdminComponent,
-    PerfilUsuarioComponent
+    PerfilUsuarioComponent,
+    PontoAtendimentoComponent
   ],
   imports: [
     BrowserModule,
