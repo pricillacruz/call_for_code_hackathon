@@ -12,4 +12,22 @@ export class NavComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  anima(){
+    let linha11 = ((<HTMLInputElement>document.querySelector("#Linha11")))
+    let linha10 = ((<HTMLInputElement>document.querySelector("#Linha10")))
+    let linha12 = ((<HTMLInputElement>document.querySelector("#Linha12")))
+
+    linha11.style.transition = '3s!important';
+    linha11.style.transform = "translateY(50px)";
+    
+    linha10.style.transition = '3s!important';
+    linha10.style.transform = "translateX(10px) translateY(10px) rotate(47deg)"
+    linha10.style.width = "39px";
+
+    linha12.style.transition = '3s!important';
+    linha12.style.transform = "translateY(39px)translateX(10px) rotate(-47deg)"
+    linha12.style.width = "39px";
+
+  }
+
 }
