@@ -9,6 +9,8 @@ import { NavComponent } from './nav/nav.component';
 import { AdminComponent } from './admin/admin.component';
 import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.component';
 import { PontoAtendimentoComponent } from './ponto-atendimento/ponto-atendimento.component';
+import { CadastroPopupComponent } from './cadastro-popup/cadastro-popup.component';
+import { LoginPopupComponent } from './login-popup/login-popup.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { PontoAtendimentoComponent } from './ponto-atendimento/ponto-atendimento
     NavComponent,
     AdminComponent,
     PerfilUsuarioComponent,
-    PontoAtendimentoComponent
+    PontoAtendimentoComponent,
+    CadastroPopupComponent,
+    LoginPopupComponent
   ],
   imports: [
     BrowserModule,
