@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+a {
+    text-decoration: none;
+}
+/* Backgrounds */
 .bg-azul-claro {
     background-color: #B4E2D9;
 }
@@ -6,9 +10,72 @@
     background-color: #2a2828;
 }
 
+/* Cores de texto */
+
 .texto-branco {
     color: white;
 }
+.texto-preto {
+    color: black;
+}
+.texto-azul-verde {
+    color: #449281;
+}
+
+/* peso da fonte */
+
+.negrito {
+    font-weight: bolder;
+}
+
+/* Tamanhos de texto */
+.font-15{
+    font-size: 15px;
+}
+
+.font-20{
+    font-size: 20px;
+}
+
+.font-25{
+    font-size: 25px;
+}
+
+/* Fontes */
+
 .font-roboto{
     font-family: 'Roboto', sans-serif;
+}
+
+/* Botões */
+
+.botaoPreto {
+    background-color: black;
+    list-style: none;
+    color: white;
+    padding: 1rem;
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif;
+    min-width: 200px;
+    text-align: center;
+}
+.botaoBranco {
+    background-color: white;
+    list-style: none;
+    color: black;
+    padding: 1rem;
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif;
+    min-width: 200px;
+    text-align: center;
+}
+.botaoAzul {
+    background-color: #449281;
+    list-style: none;
+    color: white;
+    padding: 1rem;
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif;
+    min-width: 200px;
+    text-align: center;
 }

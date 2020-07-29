@@ -1,3 +1,50 @@
 header {
     height: 90vh;
 }
+#iconePlaneta > svg {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: svganimate 7s forwards infinite ease-in-out;
+}
+@keyframes svganimate {
+    0% {stroke-dashoffset: 1000;}
+    50% {stroke-dashoffset: 300;}
+    100% {stroke-dashoffset: 0;}
+}
+#imgPlaneta {
+    width: 50%;
+    height: auto;
+    max-width: 230px;
+}
+#logoHome {
+    width: 70%;
+    height: auto;
+    min-width: 264px;
+    max-width: 490px;
+}
+#textoHeader {
+    font-size: 20px;
+    font-weight: bolder;
+}
+#janetHome {
+    height: 185px;
+    width: 185px;
+}
+
+@media (min-width : 960px){
+    #textoHeader {
+        font-size: 40px;
+    }
+    .botaoPreto {
+        min-width: 350px !important;
+    }
+    .botaoBranco {
+        min-width: 350px !important;
+    }
+    .botaoAzul {
+        min-width: 350px !important;
+    }
+    #textoMain{
+        font-size: 40px;
+    }
+}
