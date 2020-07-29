@@ -3,7 +3,8 @@ body {
 }
 nav {
     height: 10vh;
-    background-color: #BAE2D9;
+    background-color: #B4E2D9;
+    z-index: 16;
 }
 #navLogo{
     width: 30%;
