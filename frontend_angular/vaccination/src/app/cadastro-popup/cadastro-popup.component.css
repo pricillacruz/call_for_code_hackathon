@@ -81,3 +81,16 @@ label{
     /* transform: translateY(131px)!important; */
     margin: 3.75rem auto;
 }
+
+/* ----- Media Query ------- */
+
+@media (max-width: 462px){
+    .modal-body{
+        padding: 33px!important;
+    }
+}
+@media (max-width: 462px){
+    .modal-body{
+        padding: 33px!important;
+    }
+}
