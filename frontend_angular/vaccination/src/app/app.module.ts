@@ -11,6 +11,7 @@ import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.componen
 import { PontoAtendimentoComponent } from './ponto-atendimento/ponto-atendimento.component';
 import { CadastroPopupComponent } from './cadastro-popup/cadastro-popup.component';
 import { LoginPopupComponent } from './login-popup/login-popup.component';
+import { ChatbotPageComponent } from './chatbot-page/chatbot-page.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { LoginPopupComponent } from './login-popup/login-popup.component';
     PerfilUsuarioComponent,
     PontoAtendimentoComponent,
     CadastroPopupComponent,
-    LoginPopupComponent
+    LoginPopupComponent,
+    ChatbotPageComponent
   ],
   imports: [
     BrowserModule,
