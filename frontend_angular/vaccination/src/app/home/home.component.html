@@ -6,8 +6,8 @@
             <p class="font-roboto texto-preto text-center" id="textoHeader">Descubra a melhor de maneira de conseguir a vacina do covid-19</p>
         </div>
         <div class="col-lg-5 d-flex flex-column justify-content-center align-items-center">
-            <a href="" class="botaoPreto mb-3">CADASTRE-SE</a>
-            <a href="" class="botaoBranco">LOGIN</a>
+            <a href="" class="botaoPreto mb-3" (click)="abrirModal()" data-toggle="modal" data-target="#cadastroModal" data-whatever="@mdo">CADASTRE-SE</a>
+            <a href="" class="botaoBranco" (click)="abrirModalLog()" data-toggle="modal" data-target="#loginModal" data-whatever="@mdo">LOGIN</a>
         </div>
     </div>
 </header>
@@ -22,3 +22,11 @@
         <a href="" class="botaoAzul">COMEÇAR CONVERSA</a>
     </div>
 </main>
+
+<div *ngIf="abrirModalCadastro">
+    <app-cadastro-popup></app-cadastro-popup>
+</div>
+
+<div *ngIf="abrirModalLogin">
+    <app-login-popup></app-login-popup>
+</div>

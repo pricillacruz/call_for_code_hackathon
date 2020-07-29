@@ -6,10 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  abrirModalCadastro: boolean = false
+  abrirModalLogin: boolean = false
+
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  abrirModal(){
+    this.abrirModalCadastro = true
+  }
+  abrirModalLog(){
+    this.abrirModalLogin = true
+  }
+  
 }
