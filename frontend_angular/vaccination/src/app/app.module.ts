@@ -9,6 +9,8 @@ import { NavComponent } from './nav/nav.component';
 import { AdminComponent } from './admin/admin.component';
 import { CadastroPopupComponent } from './cadastro-popup/cadastro-popup.component';
 import { LoginPopupComponent } from './login-popup/login-popup.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { LoginPopupComponent } from './login-popup/login-popup.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

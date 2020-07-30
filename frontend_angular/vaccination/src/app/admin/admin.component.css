@@ -13,6 +13,13 @@
     cursor: pointer;
 }
 
+.imgPerfil{
+    background-image: url("../../assets/img/admin/perfil.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 /* ============================ Estilo e posicionamento do label dentro do input */
 label{
     position: absolute;
@@ -91,23 +98,64 @@ label{
     border-radius: 5px;
 }
 
-.dashboard:hover{
+/* .dashboard:hover{
     cursor: pointer;
     width: 170px;
     height: 170px;
     transition: cubic-bezier(0.68, -0.55, 0.265, 1.55);
     transition: 1s;
-}
+} */
 
 /* -- Dorpdown --- */
 .dropdown-toggle{
     box-shadow: 0px 1px 11px rgba(0, 0, 0, 0.17);
-    width: 180px;
-    height: 50px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .dropdown-toggle:after{
     content: none!important;
+}
+
+/* ----- media Queries */
+@media (max-width: 768px){
+    h4{
+        font-size: 18px;
+        padding-top: 2px;
+    }
+}
+@media (max-width: 767px){
+    .imgSVG{
+        display: none!important;
+    }
+    .sessaoPontodeAtendimento{
+        margin-top: 25rem;
+        margin-bottom: 6rem;
+    }
+
+    #iconeDashboard{
+        padding-left: 10px!important;
+    }
+}
+
+@media (max-width: 320px){
+    label{
+        left: 16px;
+        font-size: 14px!important;
+    }
+    h4{
+        font-size: 16px;
+    }
+    .input-estilo, .linhaSpan{
+        width: 93%;
+    }
+    .input-estilo:focus ~label, .input-estilo:valid ~ label {
+        left: 18px;
+    }
+    .iconeAdicionar, .dropResponsive{
+        margin-left: 0!important;
+        padding-left: 0!important;
+    }
+
 }
