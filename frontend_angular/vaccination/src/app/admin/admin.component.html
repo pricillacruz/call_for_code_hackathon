@@ -4,34 +4,55 @@
         <div id="poligono">
         </div>
         <article class="d-flex justify-content-center" style="bottom: 158px; height: 5%;">
-            <div class=" mt-4 rounded-circle  fotoInicial imgPerfil"
-                style="background-color: #d6d6d6; width: 180px; height: 180px;">
+            <div class=" mt-4 rounded-circle  fotoInicial imgPerfil"style="background-color: #d6d6d6; width: 180px; height: 180px;">
                 <div class="position-relative div-container-btneditar">
                     <div class="position-relative btnEditarFoto ">
                         <!-- ======== Botão para editar a foto de perfil ======== -->
-                        <div class="rounded-circle btnImgEditar d-flex justify-content-center align-items-center"
-                            style="background-color: #449988; width: 30px; height: 30px;"
-                            aria-labelledby="exampleModalCenterTitle" data-toggle="modal" data-target="#popupFoto"
-                            data-whatever="@mdo">
-                            <img src="../../assets/img/admin/botao-de-edicao-de-lapis.svg" class="rounded-circle" alt=""
-                                style="width: 16px;">
+                        <div class="rounded-circle btnImgEditar d-flex justify-content-center align-items-center"style="background-color: #449988; width: 30px; height: 30px;"aria-labelledby="exampleModalCenterTitle" data-toggle="modal" data-target="#popupFoto"data-whatever="@mdo">
+                            
+                            <article class="mb-5" style="height: 20em;">
+                                <svg class="w-100" style="height: auto;" height="207" viewBox="0 0 1440 207" fill="none"xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1440 0L-1 207V0L1440 0Z" fill="#BAE2D9" />
+                                </svg>
+                                <article class="position-relative d-flex justify-content-center" style="bottom: 158px; height: 5%;">
+                                    <div class="position-relative div-container-btneditar" style="width: 232px; height: 14em; float: right; display: flex; justify-content: center; align-items: flex-end; margin-left: 27px;">
+                                        <img class="perfil mt-4 rounded-circle imgPerfil imagemUsuario" src="{{usuario.imagem}}" alt="" style="object-fit: cover; width: 65%; height: 65%;">
+                                        <div class="position-relative btnEditarFoto" style="right: 38px; bottom: 5px;">
+                                            <!-- ======== Botão para editar a foto de perfil ======== -->
+                                            <div  class="rounded-circle btnImgEditar d-flex justify-content-center align-items-center" style="background-color: #449988; width: 30px; height: 30px;" aria-labelledby="exampleModalCenterTitle" data-toggle="modal" data-target="#popupFoto"data-whatever="@mdo">
+                                                <img src="../../assets/img/admin/botao-de-edicao-de-lapis.svg" class="rounded-circle" alt=""
+                                                style="width: 16px;">
+                                            </div>                          
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    
+                                </article>
+                                
+                                
+                                <!-- Nome -->
+                                
+                                <div style="height: 30px; width: 100%;">
+                                    <h5 style="margin-top: 62px;" class="text-dark font-roboto text-center">{{usuario.nome}}</h5>
+                                </div>
+                                <hr class="mt-5 w-50">
+                            </article>
+                            <!-- Nome -->
+                            
+                            <h5 style="margin-top: 62px;" class="text-dark font-roboto text-center">Aloy gray</h5>
+                            <hr class="mt-5 w-50">
                         </div>
-
                     </div>
                 </div>
             </div>
-
-
         </article>
-
     </article>
-    <!-- Nome -->
-
-    <h5 style="margin-top: 62px;" class="text-dark font-roboto text-center">Aloy gray</h5>
-    <hr class="mt-5 w-50">
 </header>
 
-<section class="d-flex justify-content-center">
+<!-- Container -->
+<div class="container-fluid">
+    <!-- Editar perfil -->
     <div class="row" style="height: 38em;">
         <div class="col-md-6">
             <div class="d-flex ml-4" style="margin: 95px 0 0 0;">
@@ -41,7 +62,7 @@
                 <h4 class="ml-3" style="font-size: 25px; font-weight: 400; color:#696868">Perfil</h4>
             </div>
             <div class="form-group d-flex justify-content-center">
-                <input type="text" class="form-control input-estilo inputNome" id="nome" required>
+                <input type="text" [(ngModel)]="usuario.nome" class="form-control input-estilo inputNome" id="nome" required>
                 <span class="linhaSpan"></span>
                 <label for="exampleInputNome" class="col-form-label">Nome</label>
                 <!-- <div class="position-absolute" style="top: 30px; right:44px;">
@@ -49,16 +70,16 @@
                 </div> -->
             </div>
             <div class="form-group d-flex justify-content-center">
-                <input type="text" class="form-control input-estilo inputNome" id="nome" required>
+                <input type="text" class="form-control input-estilo " required>
                 <span class="linhaSpan"></span>
-                <label for="exampleInputNome" class="col-form-label">Email</label>
+                <label for="" class="col-form-label">Email</label>
                 <!-- <div class="position-absolute" style="top: 30px; right:44px;">
                     <small style="color: red; font-size: 10px;">O nome esta incorreto, minimo 3 caracteres</small>
                 </div> -->
             </div>
             <div class="d-flex mb-0 justify-content-center form-group w-100">
                 <div class="form-group w-50 d-flex justify-content-end mr-2">
-                    <input type="text" class="form-control input-estilo " mask="(00) 00000-0000" id="nome" required>
+                    <input type="text" class="form-control input-estilo " mask="(00) 00000-0000" required>
                     <span class="linhaSpan"></span>
                     <label class="col-form-label">CEP</label>
                 </div>
@@ -69,24 +90,24 @@
                 </div>
             </div>
             <div class="form-group d-flex justify-content-center">
-                <input type="text" class="form-control input-estilo inputNome" id="nome" required>
+                <input type="text" class="form-control input-estilo" required>
                 <span class="linhaSpan"></span>
-                <label for="exampleInputNome" class="col-form-label">Endereço</label>
+                <label for="" class="col-form-label">Endereço</label>
                 <!-- <div class="position-absolute" style="top: 30px; right:44px;">
                     <small style="color: red; font-size: 10px;">O nome esta incorreto, minimo 3 caracteres</small>
                 </div> -->
             </div>
-
+            
             <!-- === Botão salvar === -->
             <div class="d-flex justify-content-center mx-5">
                 <button class="btn text-light w-100" style="background-color: black; height: 50px;">Salvar</button>
             </div>
         </div>
-
-<!-- === Dashboard === -->
+        
+        <!-- === Dashboard === -->
         <div class="col-md-6">
             <div class="d-flex ml-4" style="margin: 95px 0 0 0;">
-                <div style="padding-left: 83px;" class="mb-5">
+                <div  id="iconeDashboard" style="padding-left: 83px;" class="mb-5">
                     <img style="height: 25px;" src="../../assets/img/admin/aumentar.svg" alt="">
                 </div>
                 <h4 class="ml-3" style="font-size: 25px; font-weight: 400; color:#696868">Dashboard</h4>
@@ -96,11 +117,11 @@
                     <div class="dashboard mr-4">
                         <div class="p-2 d-flex mb-3">
                             <img style="width: 20px; height: 20px;" src="../../assets/img/admin/silhueta-de-usuario.svg"
-                                alt="">
+                            alt="">
                             <p class="pl-2 mb-0 font-roboto" style="font-size: 12px; color:#696868">Usuários</p>
                         </div>
                         <div class="d-flex justify-content-center w-100 align-items-center">
-                            <h2>15</h2>
+                            <h2 >15</h2>
                             <p class="mb-0" style="align-self: flex-end; padding-bottom: 11px;">mil</p>
                         </div>
                     </div>
@@ -129,7 +150,7 @@
                     <div class="dashboard">
                         <div class="p-2 d-flex mb-3">
                             <img style="width: 20px; height: 20px;" src="../../assets/img/admin/navegacao (1).svg"
-                                alt="">
+                            alt="">
                             <p class="pl-2 mb-0 font-roboto" style="font-size: 12px; color:#696868">Pontos</p>
                         </div>
                         <div class="d-flex justify-content-center w-100 align-items-center">
@@ -141,98 +162,120 @@
             </div>
         </div>
     </div>
-</section>
-
-
-<!-- Adicionar ponto de atendimento -->
-<section class="d-flex justify-content-center">
-    <div class="row" style="height: 38em; width: 92%;">
+    
+    
+    <!-- Adicionar ponto de atendimento -->
+    <div class="row sessaoPontodeAtendimento">
         <div class="col-md-6">
-            <div class="d-flex ml-4" style="margin: 95px 0 0 0;">
-                <div style="padding-left: 35px;" class="mb-5">
-                    <img style="height: 25px;" src="../../assets/img/admin/Group (1).svg" alt="">
+            <div class="d-flex ml-4 iconeAdicionar" style="margin: 95px 0 0 0;">
+                <div class="iconeAdicionar mb-5" style="padding-left: 17px;">
+                    <img src="../../assets/img/admin/Group (1).svg" alt="">
                 </div>
-                <h4 class="ml-3" style="font-size: 25px; font-weight: 400; color:#696868">Adicionar pontos de
+                <h4 class="ml-3" style="font-weight: 400; color:#696868">Adicionar pontos de
                     atendimentos</h4>
-            </div>
-            <div class="d-flex mb-5 ml-3 justify-content-start w-100">
-                <div class="dropdown ml-5">
-                    <button class="btn btn-light dropdown-toggle mr-4" type="button" id="dropdownMenuButton"
+                </div>
+                <div class="d-flex dropResponsive pl-4 mb-5 ml-3 justify-content-start w-100 form-group">
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle mr-4" type="button" id="dropdownMenuButton"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Estado
-                        <img src="../../assets/img/admin/Vector.svg" alt="">
+                        <img src="../../assets/img/admin/Vector.svg" alt="" style="width: 10px; margin-left: 10px;">
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item">São Paulo</a>
-                        <a class="dropdown-item">Santa Catarina</a>
-                        <a class="dropdown-item">Espirito Santo</a>
                     </div>
                 </div>
                 <div class="dropdown">
                     <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton2"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Cidade
-                        <img src="../../assets/img/admin/Vector.svg" alt="">
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Cidade
+                    <img src="../../assets/img/admin/Vector.svg" alt="" style="width: 10px; margin-left: 10px;">
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                    <a class="dropdown-item">São paulo</a>
+                    
                 </div>
-            </div>
-            <div class="form-group d-flex justify-content-center">
-                <input type="text" class="form-control input-estilo inputNome" id="nome" required>
-                <span class="linhaSpan"></span>
-                <label for="exampleInputNome" class="col-form-label">Nome</label>
-                <!-- <div class="position-absolute" style="top: 30px; right:44px;">
-                    <small style="color: red; font-size: 10px;">O nome esta incorreto, minimo 3 caracteres</small>
-                </div> -->
-            </div>
-            <div class="d-flex mb-0 justify-content-center form-group w-100">
-                <div class="form-group w-50 d-flex justify-content-end mr-2">
-                    <input type="text" class="form-control input-estilo " mask="(00) 00000-0000" id="nome" required>
-                    <span class="linhaSpan"></span>
-                    <label class="col-form-label">Endereço</label>
-                </div>
-                <div class="form-group w-50 d-flex justify-content-start">
-                    <input type="text" class="form-control input-estilo  " mask="00000-000" required>
-                    <span class="linhaSpan"></span>
-                    <label class="col-form-label" style="left: 10px;">Telefone</label>
-                </div>
-            </div>
-            <div class="d-flex mb-0 justify-content-center form-group w-100">
-                <div class="form-group w-50 d-flex justify-content-end mr-2">
-                    <input type="text" class="form-control input-estilo " mask="(00) 00000-0000" id="nome" required>
-                    <span class="linhaSpan"></span>
-                    <label class="col-form-label">Email</label>
-                </div>
-                <div class="form-group w-50 d-flex justify-content-start">
-                    <input type="text" class="form-control input-estilo  " mask="00000-000" required>
-                    <span class="linhaSpan"></span>
-                    <label class="col-form-label" style="left: 10px;">Senha</label>
-                </div>
-            </div>
-
-
-            <!-- === Botão adicionar === -->
-            <div class="d-flex justify-content-center mx-5">
-                <button class="btn text-light w-100" style="background-color: black; height: 50px;">Adicionar</button>
             </div>
         </div>
+        <div class="form-group d-flex justify-content-center">
+            <input type="text" class="form-control input-estilo inputNome" id="nome" required>
+            <span class="linhaSpan"></span>
+            <label for="exampleInputNome" class="col-form-label">Nome</label>
+            <!-- <div class="position-absolute" style="top: 30px; right:44px;">
+                <small style="color: red; font-size: 10px;">O nome esta incorreto, minimo 3 caracteres</small>
+            </div> -->
+        </div>
+        <div class="d-flex mb-0 justify-content-center form-group w-100">
+            <div class="form-group w-50 d-flex justify-content-end mr-2">
+                <input type="text" class="form-control input-estilo " mask="(00) 00000-0000" id="nome" required>
+                <span class="linhaSpan"></span>
+                <label class="col-form-label">Endereço</label>
+            </div>
+            <div class="form-group w-50 d-flex justify-content-start">
+                <input type="text" class="form-control input-estilo  " mask="00000-000" required>
+                <span class="linhaSpan"></span>
+                <label class="col-form-label" style="left: 10px;">Telefone</label>
+            </div>
+        </div>
+        <div class="d-flex mb-0 justify-content-center form-group w-100">
+            <div class="form-group w-50 d-flex justify-content-end mr-2">
+                <input type="text" class="form-control input-estilo " mask="(00) 00000-0000" required>
+                <span class="linhaSpan"></span>
+                <label class="col-form-label">Email</label>
+            </div>
+            <div class="form-group w-50 d-flex justify-content-start">
+                <input type="text" class="form-control input-estilo  " mask="00000-000" required>
+                <span class="linhaSpan"></span>
+                <label class="col-form-label" style="left: 10px;">Senha</label>
+            </div>
+        </div>
+        
+        
+        <!-- === Botão adicionar === -->
+        <div class="d-flex justify-content-center mx-5">
+            <button class="btn text-light w-100" style="background-color: black; height: 50px;">Adicionar</button>
+        </div>
+    </div>
+    
+    <!-- === Imagem SVG === -->
+    <div class="col-md-6 imgSVG d-flex justify-content-center align-items-center">
+        <div class="p-3 pt-5">
+            <img class="w-100" src="../../assets/img/admin/group-of-hospital-medical-staff-standing-together-vector-21968347 1.svg"
+            alt="">
+        </div>
+    </div>
+</div>
+</div>
 
-        <!-- === Imagem SVG === -->
-        <div class="col-md-6">
-            <div class="p-3 pt-5">
-                <img style="width: 510px;"
-                    src="../../assets/img/admin/group-of-hospital-medical-staff-standing-together-vector-21968347 1.svg"
-                    alt="">
+<svg style="height: auto;" viewBox="0 0 1440 207" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 207L1441 -5.84126e-06V207L0 207Z" fill="#BAE2D9"/>
+</svg>
+
+<!-- ========= Modal para editar a foto de perfil ============ -->
+<main class="modal fade" id="popupFoto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered justify-content-center" style="max-width: 40em!important; margin: 5.75rem auto!important;">
+        <div class="modal-content" style=" width: 35em; height: 27em;">
+            <div class="modal-body">
+                <div class="d-block">
+                    <div class="d-flex justify-content-center" style="font-weight: 100;">
+                        <div class="imgPerfil position-absolute mt-4 rounded-circle" style="background-color: #efefef; width: 200px; height: 200px;bottom: 203px" >
+                            <img src="{{usuario.imagem}}" class=" imagemUsuario w-100 h-100 rounded-circle" alt="" style="object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+                
+                <h6 class="mt-5 text-center" style="margin-top: 9em!important; color: gray;">Coloque a Url para atualizar a sua foto de perfil</h6>
+                <div class="form-group d-flex justify-content-center" style="margin-top: 3em!important;">
+                    <input type="text" class="form-control input-estilo" id="urlImagem" [(ngModel)]='usuario.imagem' required>
+                    <span class="linhaSpan"></span>
+                    <label class="col-form-label">Url</label>
+                </div>
+            </div>
+            
+            <div class="d-flex justify-content-center mt-3 mb-5">
+                <button type="button" class="btn px-3 py-2 mr-5 text-light rounded" style="background-color: rgb(190, 190, 190); border-radius: 1px; width: 170px;" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn text-light py-2" style="background-color: #449988; width: 30%;"  data-dismiss="modal">Salvar</button>
             </div>
         </div>
     </div>
-</section>
-
-<svg width="1440" height="207" viewBox="0 0 1440 207" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 207L1441 -5.84126e-06V207L0 207Z" fill="#BAE2D9"/>
-</svg>
-    
+</main>

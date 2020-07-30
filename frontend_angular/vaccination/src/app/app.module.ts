@@ -12,6 +12,8 @@ import { PontoAtendimentoComponent } from './ponto-atendimento/ponto-atendimento
 import { CadastroPopupComponent } from './cadastro-popup/cadastro-popup.component';
 import { LoginPopupComponent } from './login-popup/login-popup.component';
 import { ChatbotPageComponent } from './chatbot-page/chatbot-page.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { ChatbotPageComponent } from './chatbot-page/chatbot-page.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,8 +1,8 @@
 <nav class="container-fluid d-flex align-items-center navbar">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <img src="../../assets/img/nav/manuHamburguer.svg" alt="" id="navMenu" class=" navbar-toggler-icon">
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    </button> -->
+    <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto" style="height: 100%; background-color: #449281; z-index: 100;">
             <li class="nav-item active">
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -12,5 +12,97 @@
             </li>
         </ul>
     </div>
-    <img src="../../assets/img/logo.svg" alt="" id="navLogo" class="ml-auto mr-lg-5 navbar-brand">
+    <img src="../../assets/img/logo.svg" alt="" id="navLogo" class="ml-auto mr-lg-5 navbar-brand"> -->
+
+
+  <!-- Icone de menu hamburguer -->
+  <div (click)="anima()" class="menuHamb" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="cursor: pointer;" alt="" id="navMenu">
+    <img src="../../assets/img/nav/manuHamburguer.svg" alt="">
+  </div>
+
+  <!-- Logo da página -->
+  <img src="../../assets/img/logo.svg" alt="" id="navLogo" class="mr-auto mr-lg-5 navbar-brand">
+  
+  <div class="dropdown-menu dropdown-menu-left mt-0 border-0 dropMenuHamburguer" style="width: 250px; background-color: #bae2d9; top: 0; height: -webkit-fill-available; position: fixed;" aria-labelledby="dropdownMenuButton">
+    <div class="list-group w-100" id="list-tab" role="tablist">
+        <div class="d-flex justify-content-between align-items-center mb-5 w-100" style="cursor: pointer; padding-top: 12px;">
+            <svg class="pl-3 align-items-center d-flex" xmlns="http://www.w3.org/2000/svg" width="63.18" height="36.02" viewBox="0 0 63.18 36.02">
+              <g id="manuHamburguer" transform="translate(0 1.5)">
+                <rect style="width: 50px; height: 0.3px;" id="Linha10" data-name="Linha 10" fill="none" stroke="#000" stroke-width="4"/>
+                <rect style="width: 40px; height: 0.3px;" id="Linha11" data-name="Linha 11" transform="translate(0 16.51)" fill="none" stroke="#000" stroke-width="4"/>
+                <rect style="width: 30px; height: 0.3px;" id="Linha12" data-name="Linha 12" transform="translate(0 33.02)" fill="none" stroke="#000" stroke-width="4"/>
+              </g>
+            </svg>
+                
+        </div>
+        <div class="d-flex justify-content-between align-items-center w-100">
+            <div routerLink="/home" class="slist-group-item list-group-item-action pl-3 align-items-center d-flex justify-content-between dropMenu" id="list-profile-list">
+              <div class="icone1 iconeGeral d-flex align-items-center pr-2 justify-content-center"></div>
+                <p class="mb-0 itemMenu pr-5">Home </p>
+                <div class="d-flex align-items-center justify-content-end" style="width: 63%; padding-right: 23px;">
+                    <img src="../../assets/img/nav/setaDireita.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between align-items-center w-100">
+            <div class="slist-group-item list-group-item-action pl-3 align-items-center d-flex justify-content-between dropMenu" id="list-profile-list">
+              <div class="icone2 iconeGeral d-flex align-items-center pr-2 justify-content-center"></div>
+                <p class="mb-0 itemMenu" style="padding-right: 4rem;">Perfil </p>
+                <div class="d-flex align-items-center justify-content-end" style="width: 63%; padding-right: 23px;">
+                    <img src="../../assets/img/nav/setaDireita.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between align-items-center w-100">
+            <div class="slist-group-item listItem list-group-item-action pl-3 align-items-center d-flex justify-content-between dropMenu" id="list-profile-list">
+              <div class="icone3 d-flex align-items-center pr-2 justify-content-center"></div>
+                <p class="mb-0 itemMenuPolitica" style="width: 14rem;">Politicas de privacidade </p>
+                <div class="d-flex setaDireita align-items-center justify-content-end" style="width: 13%; padding-right: 23px;">
+                    <img src="../../assets/img/nav/setaDireita.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between align-items-center w-100">
+            <div class="slist-group-item list-group-item-action pl-3 align-items-center d-flex justify-content-between dropMenu" id="list-profile-list">
+              <div class="icone4 iconeGeral d-flex align-items-center pr-2 justify-content-center"></div>
+                <p class="mb-0 itemMenu" style="padding-right: 4rem;">FAQ </p>
+                <div class="d-flex align-items-center justify-content-end" style="width: 63%; padding-right: 23px;">
+                    <img src="../../assets/img/nav/setaDireita.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between align-items-center w-100">
+            <div class="slist-group-item list-group-item-action pl-3 align-items-center d-flex justify-content-between dropMenu" id="list-profile-list">
+              <div class="icone5 iconeGeral d-flex align-items-center pr-2 justify-content-center"></div>
+                <p class="mb-0 itemMenu" style="padding-right: 4rem;">Sair </p>
+                <div class="d-flex align-items-center justify-content-end" style="width: 63%; padding-right: 23px;">
+                    <img src="../../assets/img/nav/setaDireita.svg" alt="">
+                </div>
+            </div>
+        </div>
+        
+       
+        
+        
+        
+        
+    </div>
+</div>
+  
+<!-- Fim do menu -->
+
+
+
+  <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto" style="height: 100%; background-color: #b4e2d9; z-index: 100;">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+    </ul>
+  </div> -->
+ 
 </nav>
+
