@@ -1,10 +1,10 @@
 .div-container-btneditar{
-    height: 10em;
     width: 35px;
     float: right;
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
+    top: -44px;
 }
 .btnImgEditar:hover{
     height: 34px!important;
@@ -12,7 +12,6 @@
     transition: 0.2s;
     cursor: pointer;
 }
-
 
 /* Rotação da div diagonal */
 
@@ -25,11 +24,10 @@
     top: 25px;
     position: absolute;
 }
-.imgPerfil{
-    background-image: url("../../assets/img/admin/perfil.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+
+main {
+    background-color: #B4E2D9;
+    border-radius: 8px;
 }
 
 /* ============================ Estilo e posicionamento do label dentro do input */
@@ -99,75 +97,4 @@ label{
 }
  .input-estilo:focus ~ .linhaSpan:after {/* Tamanho da linha quando em foco e depois */
     width:100%;
-}
-
-/* --------- dashboard ------------ */
-.dashboard{
-    background-color: #BAE2D9;
-    box-shadow: 0px 1px 50px rgba(0, 0, 0, 0.21);
-    height: 150px;
-    width: 150px;
-    border-radius: 5px;
-}
-
-/* .dashboard:hover{
-    cursor: pointer;
-    width: 170px;
-    height: 170px;
-    transition: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    transition: 1s;
-} */
-
-/* -- Dorpdown --- */
-.dropdown-toggle{
-    box-shadow: 0px 1px 11px rgba(0, 0, 0, 0.17);
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.dropdown-toggle:after{
-    content: none!important;
-}
-
-/* ----- media Queries */
-@media (max-width: 768px){
-    h4{
-        font-size: 18px;
-        padding-top: 2px;
-    }
-}
-@media (max-width: 767px){
-    .imgSVG{
-        display: none!important;
-    }
-    .sessaoPontodeAtendimento{
-        margin-top: 25rem;
-        margin-bottom: 6rem;
-    }
-
-    #iconeDashboard{
-        padding-left: 10px!important;
-    }
-}
-
-@media (max-width: 320px){
-    label{
-        left: 16px;
-        font-size: 14px!important;
-    }
-    h4{
-        font-size: 16px;
-    }
-    .input-estilo, .linhaSpan{
-        width: 93%;
-    }
-    .input-estilo:focus ~label, .input-estilo:valid ~ label {
-        left: 18px;
-    }
-    .iconeAdicionar, .dropResponsive{
-        margin-left: 0!important;
-        padding-left: 0!important;
-    }
-
-}
+} 

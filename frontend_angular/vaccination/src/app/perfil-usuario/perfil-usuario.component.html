@@ -1,0 +1,88 @@
+<!-- Foto de perfil -->
+<header>
+    <article class="mb-5" style="height: 12.5em;">
+        <div id="poligono">
+            
+        </div>
+        <article class=" d-flex justify-content-center" style="bottom: 158px; height: 5%;">
+            <div class=" mt-4 rounded-circle  fotoInicial imgPerfil" style="background-color: none; width: 180px; height: 180px;">
+                <img src="../../assets/img/perfil-usuario/Avatar.png" alt="" height="100%" width="100%">
+                <div class="position-relative div-container-btneditar">
+                    <div class="position-relative btnEditarFoto ">
+                        <!-- ======== Botão para editar a foto de perfil ======== -->
+                        <div class="rounded-circle btnImgEditar d-flex justify-content-center align-items-center"style="background-color: #449988; width: 30px; height: 30px;" aria-labelledby="exampleModalCenterTitle" data-toggle="modal" data-target="#popupFoto" data-whatever="@mdo">
+                            <img src="../../assets/img/admin/botao-de-edicao-de-lapis.svg" class="rounded-circle" alt=""
+                            style="width: 16px;">
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </article>
+    </article>
+    <h5 class="text-dark font-roboto text-center">RODRIGO HILBERT</h5>
+    <section class="d-flex flex-column flex-md-row align-items-center justify-content-center my-5">
+
+        <!-- STATUS DO AGENDAMENTO  -->
+
+        <main class="col-11 col-md-4 py-5 px-md-5 d-flex flex-column align-items-center justify-content-center">
+            <p class="font-25 font-roboto texto-preto text-center negrito">STATUS:</p>
+            <p class="font-25 font-roboto texto-azul-verde text-center negrito">AGENDADO</p>
+            <div style="width: 90%; height: 1px; background-color: black;" class="my-0"></div>
+            <p class="font-15 font-roboto texto-preto text-center mt-3">Você poderá encontrar sua vacina em: Hospital JanetJackson na Rua dos hospitais, 415, Vila Mariana -SP no dia 24/02/2020 ás 16:00.</p>
+            <a href="" class="botaoPreto mt-2">DESISTIR</a>
+        </main>
+
+        <!-- FORMULARIO DO PERFIL  -->
+
+        <div class="col-md-4">
+            <div class="d-flex ml-md-4 mt-5 mt-md-0" style="">
+                <div style="padding-left: 35px;" class="mb-5">
+                    <img style="height: 25px;" src="../../assets/img/admin/do-utilizador.svg" alt="">
+                </div>
+                <h4 class="ml-3  font-25 " >PERFIL</h4>
+            </div>
+            <div class="form-group d-flex justify-content-center">
+                <input type="text" class="form-control input-estilo inputNome" id="nome" required>
+                <span class="linhaSpan"></span>
+                <label for="exampleInputNome" class="col-form-label">Nome</label>
+                <!-- <div class="position-absolute" style="top: 30px; right:44px;">
+                    <small style="color: red; font-size: 10px;">O nome esta incorreto, minimo 3 caracteres</small>
+                </div> -->
+            </div>
+            <div class="form-group d-flex justify-content-center">
+                <input type="text" class="form-control input-estilo inputNome" id="nome" required>
+                <span class="linhaSpan"></span>
+                <label for="exampleInputNome" class="col-form-label">Email</label>
+                <!-- <div class="position-absolute" style="top: 30px; right:44px;">
+                    <small style="color: red; font-size: 10px;">O nome esta incorreto, minimo 3 caracteres</small>
+                </div> -->
+            </div>
+            <div class="d-flex mb-0 justify-content-center form-group w-100">
+                <div class="form-group w-50 d-flex justify-content-end mr-2">
+                    <input type="text" class="form-control input-estilo " mask="(00) 00000-0000" id="nome" required>
+                    <span class="linhaSpan"></span>
+                    <label class="col-form-label">CEP</label>
+                </div>
+                <div class="form-group w-50 d-flex justify-content-start">
+                    <input type="text" class="form-control input-estilo  " mask="00000-000" required>
+                    <span class="linhaSpan"></span>
+                    <label class="col-form-label" style="left: 10px;">Data de nascimento</label>
+                </div>
+            </div>
+            <div class="form-group d-flex justify-content-center">
+                <input type="text" class="form-control input-estilo inputNome" id="nome" required>
+                <span class="linhaSpan"></span>
+                <label for="exampleInputNome" class="col-form-label">Endereço</label>
+                <!-- <div class="position-absolute" style="top: 30px; right:44px;">
+                    <small style="color: red; font-size: 10px;">O nome esta incorreto, minimo 3 caracteres</small>
+                </div> -->
+            </div>
+
+            <!-- === Botão salvar === -->
+            <div class="d-flex justify-content-center mx-5">
+                <a class="botaoPreto">SALVAR</a>
+            </div>
+        </div>
+    </section>
+</header>

@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 a {
-    text-decoration: none;
+    text-decoration: none !important;
+    list-style: none;
 }
 /* Backgrounds */
 .bg-azul-claro {
@@ -52,7 +53,7 @@ a {
 .botaoPreto {
     background-color: black;
     list-style: none;
-    color: white;
+    color: white !important;
     padding: 1rem;
     font-weight: bolder;
     font-family: 'Roboto', sans-serif;
