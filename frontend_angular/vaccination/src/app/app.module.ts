@@ -11,6 +11,8 @@ import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.componen
 import { PontoAtendimentoComponent } from './ponto-atendimento/ponto-atendimento.component';
 import { CadastroPopupComponent } from './cadastro-popup/cadastro-popup.component';
 import { LoginPopupComponent } from './login-popup/login-popup.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { LoginPopupComponent } from './login-popup/login-popup.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

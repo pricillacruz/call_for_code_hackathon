@@ -16,3 +16,149 @@ nav {
     height: auto;
     max-width: 50px;
 }
+
+/* ================ Menu ======================= */
+
+.dropMenu{
+    height: 60px;
+    cursor: pointer;
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+/* ----- Animação dropdown ----------- */
+
+@keyframes animateMenu{
+    from{
+        transform: translateX(-20px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+.dropMenuHamburguer{
+    box-shadow: -2px 16px 15px rgba(0, 0, 0, 0.315);
+    min-width: 17rem!important;
+    border: none;
+    /* top: 2px!important; */
+    left: 0px!important;
+    z-index: 3!important;
+    animation-name: animateMenu;
+    animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/* ---------Fim da anima */
+.list-group-item-action:hover .iconeGeral, .list-group-item-action:focus .iconeGeral{
+    background-repeat: no-repeat;
+    transition: 1s;
+    transform: translateX(6px);
+    width: 26px;
+    height: 20px;
+}
+.list-group-item-action:hover .icone1, .list-group-item-action:focus .icone1{
+    /* background-image: url("../../assets/img/admin/do-utilizador.svg"); */
+
+}
+.list-group-item-action:hover .icone2, .list-group-item-action:focus .icone2{
+    background-image: url("../../assets/img/nav/do-utilizador.svg");
+}
+.list-group-item-action:hover .icone3, .list-group-item-action:focus .icone3{
+    background-image: url("../../assets/img/nav/Politicadeprivacidade.svg");
+    background-repeat: no-repeat;
+    transition: 1s;
+    transform: translateX(6px);
+    width: 26px;
+    height: 25px;
+    padding-right: 0px!important;
+}
+.list-group-item-action:hover .icone4, .list-group-item-action:focus .icone4{
+    background-image: url("../../assets/img/nav/pergunta.svg");
+}
+.list-group-item-action:hover .icone5, .list-group-item-action:focus .icone5{
+    background-image: url("../../assets/img/nav/Sair.svg");
+}
+
+.list-group-item-action:hover, .list-group-item-action:focus{
+    background-color: #8AD3C3!important;
+    border-left: 5px solid #000000;
+    outline: 0;
+}
+.list-group-item-action:hover .itemMenu, .list-group-item-action:focus .itemMenu{
+    padding-left: 20px!important;
+    transition: 1s;
+}
+.list-group-item-action:hover .setaDireita, .list-group-item-action:focus .setaDireita{
+    padding-left: 0px!important;
+}
+.listItem:hover .itemMenuPolitica, .listItem:focus .itemMenuPolitica{
+    padding-left: 19px!important;
+    transition: 1s;
+
+}
+
+/* --------- animação com o menu hamburguer ----------- */
+
+
+/* 
+}
+
+.menuHamb:active  #Linha12{
+    transform: rotate(-47deg);
+    stroke-width: 3px;
+    transform: translatey(32px) translateX(10px) rotate(-45deg);
+    height: 6px;
+    transition: 1s;
+    width: 50px;
+} */
+
+
+@keyframes animateLinha{
+    from{
+        transform: translateY(0px);
+        transition: 1s;
+        width: 60px;
+    }
+    to{
+        transform: translateX(10px) translateY(10px) rotate(47deg);
+        transition: 1s;
+        width: 39px;
+    }
+}
+
+#Linha10{
+    animation-name: animateLinha;
+    animation-duration: 2s;
+    stroke: 2px;
+    transition: 1s;
+    width: 50px;
+}
+@keyframes animateLinha2{
+    from{
+        transform:  translateY(30px);
+    }
+    to{
+        transform: translateY(39px) translateX(10px) rotate(-47deg);
+    }
+}
+
+#Linha12{
+    animation-name: animateLinha2;
+    animation-duration: 2s;
+    width: 39px
+}
+@keyframes animateLinha3{
+    from{
+        transform: translateY(15px);
+        width: 50px;
+    }
+    to{
+        transform: translateY(35px);
+        stroke: transparent;
+        display: none;
+    }
+}
+#Linha11{
+    animation-name: animateLinha3;
+    animation-duration: 2s;
+}
