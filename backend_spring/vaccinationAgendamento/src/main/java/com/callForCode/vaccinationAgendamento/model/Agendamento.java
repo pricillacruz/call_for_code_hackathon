@@ -29,6 +29,40 @@ public class Agendamento {
 	
 	@Temporal(TemporalType.TIME)
 	private Date horario;
+
+	public long getIdagendamento() {
+		return idagendamento;
+	}
+
+	public void setIdagendamento(long idagendamento) {
+		this.idagendamento = idagendamento;
+	}
+
+	public String getNomeunidade() {
+		return nomeunidade;
+	}
+
+	public void setNomeunidade(String nomeunidade) {
+		this.nomeunidade = nomeunidade;
+	}
+
+	public Date getDataagendamento() {
+		return dataagendamento;
+	}
+
+	public void setDataagendamento(Date dataagendamento) {
+		this.dataagendamento = dataagendamento;
+	}
+
+	public Date getHorario() {
+		return horario;
+	}
+
+	public void setHorario(Date horario) {
+		this.horario = horario;
+	}
+	
+	
 	
 	
 }
