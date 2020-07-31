@@ -15,7 +15,7 @@ export class AdminComponent implements OnInit {
   login:boolean = false
   pontoAtendimento: pontoAtendimento = new pontoAtendimento
   senha:string
-
+  nome = localStorage.getItem('nome')
   constructor(private router: Router, private auth: AutenticarService) { }
 
 
