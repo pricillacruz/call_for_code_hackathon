@@ -1,13 +1,13 @@
 # HACKATHON CALL FOR CODE 
 
-#VACCINATION
+## VACCINATION
 
-VACCINATION is a non-profit platform, it was developed to solve problems and
-help the population and public health agencies to organize vaccinations, without chaos,
-long lines, agglomerations and having a clear and objective communication .
-Have the ease and comfort of scheduling your vaccine in the palm of your hand.
-With your smartphone you can choose the day, time and loction that is best for you. 
-In addition to learning more about COVID-19
+VACCINATION is a non-profit platform, it was developed to solve problems and help the population and public health agencies to 
+organize vaccinations, without chaos, long lines, agglomerations and having a clear and objective communication .Have the ease 
+and comfort of scheduling your vaccine in the palm of your hand. With your smartphone you can choose the day, time and loction 
+that is best for you. In addition to learning more about COVID-19. The platform is initially in portuguese, as it will serve the
+population of São Paulo, but it can be expanded to other countries.
+
 
 <p align="center">
     <img alt="Status do projeto" src="https://img.shields.io/badge/Status-em%20constru%C3%A7%C3%A3o-ff4b8d"/>
