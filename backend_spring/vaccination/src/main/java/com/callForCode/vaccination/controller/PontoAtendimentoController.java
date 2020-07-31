@@ -52,6 +52,10 @@ public class PontoAtendimentoController {
 	public ResponseEntity<PontoAtendimento> post(@RequestBody PontoAtendimento pontoAtendimento){
 		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(pontoAtendimento));
 	}
+	@PostMapping("/cadastrarPonto")
+	public ResponseEntity<PontoAtendimento> PostPonto(@RequestBody PontoAtendimento pontoAtendimento){
+		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(pontoAtendimento));
+	}
 	
 	@PutMapping
 	public ResponseEntity<PontoAtendimento> put(@RequestBody PontoAtendimento pontoAtendimento){
