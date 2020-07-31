@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Usuario } from '../model/usuario';
 import { userLogin } from '../model/userLogin';
+import { pontoAtendimento } from '../model/pontoAtendimento';
 
 @Injectable({
   providedIn: 'root'
@@ -11,11 +12,15 @@ export class AutenticarService {
   constructor(private http: HttpClient) { }
 
   logar(login: userLogin){
-    return this.http.post('http://dashdb-txn-sbox-yp-dal09-12.services.dal.bluemix.net:50000/usuario/logar', login)
+    return this.http.post('http://localhost:8080/usuario/logar', login)
   }
 
   cadastrar(usuario: Usuario){
-    return this.http.post('http://dashdb-txn-sbox-yp-dal09-12.services.dal.bluemix.net:50000/usuario/cadastrar', usuario)
+    return this.http.post('http://localhost:8080/usuario/cadastrar', usuario)
+  }
+
+  cadastrarPontoAtendimento(pontoAtendimento: pontoAtendimento){
+    return this.http.post('http://localhost:8080/pontoAtendimento/cadastrarPonto', pontoAtendimento)
   }
 
   btnSair(){
