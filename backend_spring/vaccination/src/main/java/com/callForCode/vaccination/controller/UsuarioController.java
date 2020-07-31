@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.callForCode.vaccination.model.Usuario;
 import com.callForCode.vaccination.repository.UsuarioRepository;
-//import com.callForCode.vaccination.service.UsuarioService;
 
 @RestController
 @RequestMapping("/usuario")
@@ -26,9 +25,6 @@ import com.callForCode.vaccination.repository.UsuarioRepository;
 public class UsuarioController {
 	@Autowired
 	private UsuarioRepository repository;
-	
-	@Autowired
-//	private UsuarioService usuarioService;
 	
 	@GetMapping
 	public ResponseEntity<List<Usuario>> GetAll(){

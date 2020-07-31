@@ -170,52 +170,49 @@
                     
                 </div>
             </div>
-        </div>
-        <div class="form-group d-flex justify-content-center">
-            <input type="text" class="form-control input-estilo inputNome" id="nome" required>
-            <span class="linhaSpan"></span>
-            <label for="exampleInputNome" class="col-form-label">Nome</label>
-            <!-- <div class="position-absolute" style="top: 30px; right:44px;">
-                <small style="color: red; font-size: 10px;">O nome esta incorreto, minimo 3 caracteres</small>
-            </div> -->
-        </div>
-        <div class="d-flex mb-0 justify-content-center form-group w-100">
-            <div class="form-group w-50 d-flex justify-content-end mr-2">
-                <input type="text" class="form-control input-estilo " mask="(00) 00000-0000" id="nome" required>
+            <div class="form-group d-flex justify-content-center">
+                <input type="text" [(ngModel)]="pontoAtendimento.nome" class="form-control input-estilo inputNome" required>
                 <span class="linhaSpan"></span>
                 <label class="col-form-label">Endereço</label>
             </div>
-            <div class="form-group w-50 d-flex justify-content-start">
-                <input type="text" class="form-control input-estilo  " mask="00000-000" required>
-                <span class="linhaSpan"></span>
-                <label class="col-form-label" style="left: 10px;">Telefone</label>
+            <div class="d-flex mb-0 justify-content-center form-group w-100">
+                <div class="form-group w-50 d-flex justify-content-end mr-2">
+                    <input type="text" [(ngModel)]="pontoAtendimento.email" class="form-control input-estilo " required>
+                    <span class="linhaSpan"></span>
+                    <label class="col-form-label">Email</label>
+                </div>
+                <div class="form-group w-50 d-flex justify-content-start">
+                    <input type="text" [(ngModel)]="pontoAtendimento.telefone" class="form-control input-estilo  " required>
+                    <span class="linhaSpan"></span>
+                    <label class="col-form-label" style="left: 10px;">Telefone</label>
+                </div>
+            </div>
+            <div class="d-flex mb-0 justify-content-center form-group w-100">
+                <div class="form-group w-50 d-flex justify-content-end mr-2">
+                    <input type="password" (input)='conferirSenha($event)' value="{{senha}}" class="form-control input-estilo " required>
+                    <span class="linhaSpan"></span>
+                    <label class="col-form-label">Senha</label>
+                </div>
+                <div class="form-group w-50 d-flex justify-content-start">
+                    <input type="password" [(ngModel)]="pontoAtendimento.senha" class="form-control input-estilo  " required>
+                    <span class="linhaSpan"></span>
+                    <label class="col-form-label" style="left: 10px;">Confirmar senha</label>
+                </div>
+            </div>
+
+
+            <!-- === Botão adicionar === -->
+            <div class="d-flex justify-content-center mx-5">
+                <button class="btn text-light w-100" (click)="cadastrarPonto()" style="background-color: black; height: 50px;">Adicionar</button>
             </div>
         </div>
-        <div class="d-flex mb-0 justify-content-center form-group w-100">
-            <div class="form-group w-50 d-flex justify-content-end mr-2">
-                <input type="text" class="form-control input-estilo " mask="(00) 00000-0000" required>
-                <span class="linhaSpan"></span>
-                <label class="col-form-label">Email</label>
+
+        <!-- === Imagem SVG === -->
+        <div class="col-md-6 imgSVG d-flex justify-content-center align-items-center">
+            <div class="p-3 pt-5">
+                <img class="w-100"  src="../../assets/img/admin/group-of-hospital-medical-staff-standing-together-vector-21968347 1.svg"
+                    alt="">
             </div>
-            <div class="form-group w-50 d-flex justify-content-start">
-                <input type="text" class="form-control input-estilo  " mask="00000-000" required>
-                <span class="linhaSpan"></span>
-                <label class="col-form-label" style="left: 10px;">Senha</label>
-            </div>
-        </div>
-        
-        
-        <!-- === Botão adicionar === -->
-        <div class="d-flex justify-content-center mx-5">
-            <button class="btn text-light w-100" style="background-color: black; height: 50px;">Adicionar</button>
-        </div>
-    </div>
-    
-    <!-- === Imagem SVG === -->
-    <div class="col-md-6 imgSVG d-flex justify-content-center align-items-center">
-        <div class="p-3 pt-5">
-            <img class="w-100" src="../../assets/img/admin/group-of-hospital-medical-staff-standing-together-vector-21968347 1.svg"
-            alt="">
         </div>
     </div>
 </div>
@@ -250,6 +247,19 @@
                 <button type="button" class="btn px-3 py-2 mr-5 text-light rounded" style="background-color: rgb(190, 190, 190); border-radius: 1px; width: 170px;" data-dismiss="modal">Cancelar</button>
                 <button type="button" class="btn text-light py-2" style="background-color: #449988; width: 30%;"  data-dismiss="modal">Salvar</button>
             </div>
+          </div>
+          
+          <h6 class="mt-5 text-center" style="margin-top: 9em!important; color: gray;">Coloque a Url para atualizar a sua foto de perfil</h6>
+          <div class="form-group d-flex justify-content-center" style="margin-top: 3em!important;">
+            <input type="text" class="form-control input-estilo" [(ngModel)]='usuario.imagem' required>
+            <span class="linhaSpan"></span>
+            <label class="col-form-label">Url</label>
+          </div>
+        </div>
+        
+        <div class="d-flex justify-content-center mt-3 mb-5">
+          <button type="button" class="btn px-3 py-2 mr-5 text-light rounded" style="background-color: rgb(190, 190, 190); border-radius: 1px; width: 170px;" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn text-light py-2" style="background-color: #449988; width: 30%;"  data-dismiss="modal">Salvar</button>
         </div>
     </div>
 </main>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  abrirModalLogin:boolean = false
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -27,6 +29,13 @@ export class NavComponent implements OnInit {
     linha12.style.transform = "translateY(32px)translateX(10px) rotate(-47deg)"
 
 
+  }
+
+
+  sair(){
+    // this.router.navigate(['/home'])
+    // localStorage.clear()
+    abrirModalLogin = true
   }
 
 }

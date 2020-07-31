@@ -26,7 +26,7 @@ public class Usuario {
 	@Size(min = 5, max = 100)
 	private String nome;
 
-//	@Column(name = "data_nascimento_usuario", nullable = true)
+//	@Column(name = "data_nascimento_usuario", nullable = false)
 //	@Size(min = 8, max = 8)
 //	private Date dataNascimento;
 
@@ -50,13 +50,24 @@ public class Usuario {
 
 	@Column(name = "tipo_usuario", nullable = true)
 	private String tipo;
+	
+	@Column(name = "endereco_usuario", nullable = true)
+	private String endereco;
+	
+	@Column(name = "cep_usuario", nullable = true)
+	private String cep;
+	
+	@Column(name = "numeroEndereco_usuario", nullable = true)
+	private int numeroEndereco;
+	
+	@Column(name = "bairro_usuario", nullable = true)
+	private String bairro;
 
 	@Column(name = "senha_usuario", nullable = true)
 	@Size(min = 6, max = 30)
 	
 	// definir se endereço vai ser outra tabela
 	// private String endereço_usuario;
-	
 	
 	
 	private String senha;

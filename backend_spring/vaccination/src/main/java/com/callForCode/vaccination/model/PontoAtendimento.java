@@ -18,36 +18,36 @@ public class PontoAtendimento {
 	@Column(name = "id_ponto_atendimento")
 	private long id;
 	
-	@Column(name = "nome_ponto_atendimento", nullable = false)
+	@Column(name = "nome_ponto_atendimento", nullable = true)
 	@Size(min = 3, max = 100)
 	private String nome;
 
-	@Column(name = "email_ponto_atendimento", nullable = false, unique = true)
+	@Column(name = "email_ponto_atendimento", nullable = true, unique = true)
 	@Size(min = 8, max = 50)
 	@Email
 	private String email;
 
-	@Column(name = "telefone_ponto_atendimento", nullable = false, unique = true)
+	@Column(name = "telefone_ponto_atendimento", nullable = true, unique = true)
 	@Size(min = 8, max = 9)
 	private String telefone;
 
-	@Column(name = "senha_ponto_atendimento", nullable = false)
+	@Column(name = "senha_ponto_atendimento", nullable = true)
 	@Size(min = 6, max = 30)
 	private String senha;
 
 	// definir se endereço vai ser outra tabela
 	// private String endereço_ponto_atendimento;
 	
-	@Column(name = "qt_vacina_recebida", nullable = false)
+	@Column(name = "qt_vacina_recebida", nullable = true)
 	private int qtVacinaRecebida;
 
-	@Column(name = "qt_vacina_atual", nullable = false)
+	@Column(name = "qt_vacina_atual", nullable = true)
 	private int qtVacinaAtual;
 
-	@Column(name = "qt_vacina_preferencial", nullable = false)
+	@Column(name = "qt_vacina_preferencial", nullable = true)
 	private int qtVacinaPreferencial;
 
-	@Column(name = "qt_vacina_comum", nullable = false)
+	@Column(name = "qt_vacina_comum", nullable = true)
 	private int qtVacinaComum;
 
 	public long getId() {
