@@ -32,10 +32,10 @@ export class NavComponent implements OnInit {
   }
 
 
-  sair(){
-    // this.router.navigate(['/home'])
-    // localStorage.clear()
-    abrirModalLogin = true
-  }
+  // sair(){
+  //   this.router.navigate(['/home'])
+  //   localStorage.clear()
+  //   this.abrirModalLogin = true
+  // }
 
 }

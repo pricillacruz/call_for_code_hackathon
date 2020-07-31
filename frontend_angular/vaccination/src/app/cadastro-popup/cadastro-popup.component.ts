@@ -29,10 +29,10 @@ export class CadastroPopupComponent implements OnInit {
 
   cadastrar(){
     if(this.senha == this.usuario.senha){
-      let AbrirPopupLogin = ((<HTMLInputElement>document.querySelector(".btnCadastrar")))
+      // let AbrirPopupLogin = ((<HTMLInputElement>document.querySelector(".btnCadastrar")))
       
-      this.fecharPopup();
-      AbrirPopupLogin.setAttribute('data-target', '#loginModal')
+      // this.fecharPopup();
+      // AbrirPopupLogin.setAttribute('data-target', '#loginModal')
       this.auth.cadastrar(this.usuario).subscribe((resp: Usuario)=>{
         this.usuario = resp
         alert("usuario cadastrado")
