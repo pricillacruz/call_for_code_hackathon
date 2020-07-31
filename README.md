@@ -20,7 +20,7 @@ servir a população de São Paulo mas pode ser expandido para outros países.
     <img alt="Problemas em aberto" src="https://img.shields.io/github/issues/bielzin42/cresci?color=ff4b8d&logo=ff4b8d&logoColor=ff4b8d" />   
 </p>
 
-## Tecnologias Utilizadas
+## Tecnologies - Tecnologias Utilizadas
 
 ### Back-end
 * IBM Cloud
@@ -42,7 +42,7 @@ servir a população de São Paulo mas pode ser expandido para outros países.
 * TypeScript
 * Bootstrap
 
-### Planejamento e Organização
+### Planning and Organization - Planejamento e Organização
 * Adobe XD
 * Figma
 * Git
