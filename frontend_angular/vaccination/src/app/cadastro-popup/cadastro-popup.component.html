@@ -7,7 +7,7 @@
             </div>
             <div class="modal-body" style="padding: 63px;">
                 <div class="form-group d-flex justify-content-center">
-                    <input type="text" class="form-control input-estilo" required>
+                    <input type="text" [(ngModel)]="usuario.nome" class="form-control input-estilo" required>
                     <span class="linhaSpan"></span>
                     <label for="exampleInputNome" class="col-form-label">Nome</label>
                     <!-- <div class="position-absolute" style="top: 30px; right:44px;">
@@ -15,7 +15,7 @@
                 </div> -->
                 </div>
                 <div class="form-group d-flex justify-content-center">
-                    <input type="text" class="form-control input-estilo" required>
+                    <input type="text" [(ngModel)]="usuario.email" class="form-control input-estilo" required>
                     <span class="linhaSpan"></span>
                     <label for="exampleInputNome" class="col-form-label">Email</label>
                     <!-- <div class="position-absolute" style="top: 30px; right:44px;">
@@ -23,7 +23,7 @@
                 </div> -->
                 </div>
                 <div class="form-group d-flex justify-content-center">
-                    <input type="text" class="form-control input-estilo" required>
+                    <input type="text" [(ngModel)]="usuario.cpf" class="form-control input-estilo" required>
                     <span class="linhaSpan"></span>
                     <label for="exampleInputNome" class="col-form-label">CPF</label>
                     <!-- <div class="position-absolute" style="top: 30px; right:44px;">
@@ -31,9 +31,17 @@
                 </div> -->
                 </div>
                 <div class="form-group d-flex mb-0 justify-content-center">
-                    <input type="password" class="form-control input-estilo" required>
+                    <input type="password" (input)='conferirSenha($event)' value="{{senha}}" class="form-control input-estilo" required>
                     <span class="linhaSpan"></span>
                     <label for="exampleInputNome" class="col-form-label">Senha</label>
+                    <!-- <div class="position-absolute" style="top: 30px; right:44px;">
+                    <small style="color: red; font-size: 10px;">O nome esta incorreto, minimo 3 caracteres</small>
+                </div> -->
+                </div>
+                <div class="form-group d-flex mb-0 justify-content-center">
+                    <input type="password" [(ngModel)]="usuario.senha" class="form-control input-estilo" required>
+                    <span class="linhaSpan"></span>
+                    <label for="exampleInputNome" class="col-form-label">Confirmar senha</label>
                     <!-- <div class="position-absolute" style="top: 30px; right:44px;">
                     <small style="color: red; font-size: 10px;">O nome esta incorreto, minimo 3 caracteres</small>
                 </div> -->
@@ -46,7 +54,7 @@
 
     <!-- === Botão cadastrar === -->
                 <div class="d-flex justify-content-center mx-5">
-                    <button class="btn rounded-0 text-light w-100" style="background-color: black; height: 50px;">Cadastrar</button>
+                    <button (click)="cadastrar()" class="btn rounded-0 text-light w-100" style="background-color: black; height: 50px;">Cadastrar</button>
                 </div>
             </div>
         </div>
