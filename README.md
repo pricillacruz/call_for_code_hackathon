@@ -16,6 +16,7 @@ você pode escolher o dia, a hora e o local que é melhor para você em adição
 servir a população de São Paulo mas pode ser expandido para outros países.
 
 
+
 <p align="center">
     <img alt="Status do projeto" src="https://img.shields.io/badge/Status-em%20constru%C3%A7%C3%A3o-ff4b8d"/>
     <img alt="Autores" src="https://img.shields.io/badge/Autores-Equipe%20VACCINATION-ff4b8d"/>
@@ -27,7 +28,7 @@ servir a população de São Paulo mas pode ser expandido para outros países.
 ### Back-end
 * IBM Cloud
 * IBM Cloud Watson Assistant
-* IBM Cloud function
+* IBM Cloud Functions
 * IBM Cloud DB2
 * Rest:API
 * Spring Boot
@@ -48,7 +49,7 @@ servir a população de São Paulo mas pode ser expandido para outros países.
 * Adobe XD
 * Figma
 * Git
-* Github (Issues, pull request, projects (Kanban)
+* Github (Issues, pull request, projects (Kanban))
 * Davinci Resolve
 * Github
 * OBS Studio
