@@ -22,15 +22,15 @@ public class Usuario {
 	@Column(name = "id_usuario")
 	private long id;
 
-	@Column(name = "nome_usuario", nullable = false)
+	@Column(name = "nome_usuario", nullable = true)
 	@Size(min = 5, max = 100)
 	private String nome;
 
-	@Column(name = "data_nascimento_usuario", nullable = false)
-	@Size(min = 8, max = 8)
-	private Date dataNascimento;
+//	@Column(name = "data_nascimento_usuario", nullable = true)
+//	@Size(min = 8, max = 8)
+//	private Date dataNascimento;
 
-	@Column(name = "rg_usuario", nullable = false, unique = true)
+	@Column(name = "rg_usuario", nullable = true, unique = true)
 	@Size(min = 9, max = 9)
 	private String rg;
 
@@ -39,19 +39,19 @@ public class Usuario {
 	@CPF
 	private String cpf;
 
-	@Column(name = "email_usuario", nullable = false, unique = true)
+	@Column(name = "email_usuario", nullable = true, unique = true)
 	@Size(min = 8, max = 50)
 	@Email
 	private String email;
 
-	@Column(name = "telefone_usuario", nullable = false)
+	@Column(name = "telefone_usuario", nullable = true)
 	@Size(min = 10, max = 11)
 	private String telefone;
 
-	@Column(name = "tipo_usuario", nullable = false)
+	@Column(name = "tipo_usuario", nullable = true)
 	private String tipo;
 
-	@Column(name = "senha_usuario", nullable = false)
+	@Column(name = "senha_usuario", nullable = true)
 	@Size(min = 6, max = 30)
 	
 	// definir se endereço vai ser outra tabela
@@ -77,13 +77,13 @@ public class Usuario {
 		this.nome = nome;
 	}
 
-	public Date getDataNascimento() {
-		return dataNascimento;
-	}
-
-	public void setDataNascimento(Date dataNascimento) {
-		this.dataNascimento = dataNascimento;
-	}
+//	public Date getDataNascimento() {
+//		return dataNascimento;
+//	}
+//
+//	public void setDataNascimento(Date dataNascimento) {
+//		this.dataNascimento = dataNascimento;
+//	}
 
 	public String getRg() {
 		return rg;
