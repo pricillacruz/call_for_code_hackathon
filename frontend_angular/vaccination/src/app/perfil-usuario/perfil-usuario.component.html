@@ -43,7 +43,7 @@
                 <h4 class="ml-3  font-25 " >PERFIL</h4>
             </div>
             <div class="form-group d-flex justify-content-center">
-                <input type="text" class="form-control input-estilo inputNome" id="nome" required>
+                <input type="text" [(ngModel)]="usuario.nome" class="form-control input-estilo inputNome" id="nome" required>
                 <span class="linhaSpan"></span>
                 <label for="exampleInputNome" class="col-form-label">Nome</label>
                 <!-- <div class="position-absolute" style="top: 30px; right:44px;">
@@ -51,7 +51,7 @@
                 </div> -->
             </div>
             <div class="form-group d-flex justify-content-center">
-                <input type="text" class="form-control input-estilo inputNome" id="nome" required>
+                <input type="text" [(ngModel)]="usuario.email" class="form-control input-estilo inputNome" id="nome" required>
                 <span class="linhaSpan"></span>
                 <label for="exampleInputNome" class="col-form-label">Email</label>
                 <!-- <div class="position-absolute" style="top: 30px; right:44px;">
@@ -60,18 +60,18 @@
             </div>
             <div class="d-flex mb-0 justify-content-center form-group w-100">
                 <div class="form-group w-50 d-flex justify-content-end mr-2">
-                    <input type="text" class="form-control input-estilo " mask="(00) 00000-0000" id="nome" required>
+                    <input type="text" [(ngModel)]="usuario.cep" class="form-control input-estilo " mask="(00) 00000-0000" id="nome" required>
                     <span class="linhaSpan"></span>
                     <label class="col-form-label">CEP</label>
                 </div>
                 <div class="form-group w-50 d-flex justify-content-start">
-                    <input type="text" class="form-control input-estilo  " mask="00000-000" required>
+                    <input type="text" [(ngModel)]="usuario.datanascimento" class="form-control input-estilo  " mask="00000-000" required>
                     <span class="linhaSpan"></span>
                     <label class="col-form-label" style="left: 10px;">Data de nascimento</label>
                 </div>
             </div>
             <div class="form-group d-flex justify-content-center">
-                <input type="text" class="form-control input-estilo inputNome" id="nome" required>
+                <input type="text" [(ngModel)]="usuario.endereco" class="form-control input-estilo inputNome" id="nome" required>
                 <span class="linhaSpan"></span>
                 <label for="exampleInputNome" class="col-form-label">Endereço</label>
                 <!-- <div class="position-absolute" style="top: 30px; right:44px;">
@@ -81,7 +81,7 @@
 
             <!-- === Botão salvar === -->
             <div class="d-flex justify-content-center mx-5">
-                <a class="botaoPreto">SALVAR</a>
+                <button class="botaoPreto">SALVAR</button>
             </div>
         </div>
     </section>

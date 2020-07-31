@@ -3,7 +3,7 @@ body {
 }
 nav {
     height: 10vh;
-    background-color: #B4E2D9;
+    background-color: #bae2d9;
     z-index: 16;
 }
 #navLogo{
@@ -117,12 +117,12 @@ nav {
     from{
         transform: translateY(0px);
         transition: 1s;
-        width: 60px;
+        width: 45px;
     }
     to{
         transform: translateX(10px) translateY(10px) rotate(47deg);
         transition: 1s;
-        width: 39px;
+        width: 30px;
     }
 }
 
@@ -131,26 +131,26 @@ nav {
     animation-duration: 2s;
     stroke: 2px;
     transition: 1s;
-    width: 50px;
+    width: 30px!important;
 }
 @keyframes animateLinha2{
     from{
         transform:  translateY(30px);
     }
     to{
-        transform: translateY(39px) translateX(10px) rotate(-47deg);
+        transform: translateY(32px) translateX(10px) rotate(-47deg);
     }
 }
 
 #Linha12{
     animation-name: animateLinha2;
     animation-duration: 2s;
-    width: 39px
+    width: 30px
 }
 @keyframes animateLinha3{
     from{
         transform: translateY(15px);
-        width: 50px;
+        width:25px;
     }
     to{
         transform: translateY(35px);

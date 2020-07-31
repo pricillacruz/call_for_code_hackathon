@@ -1,28 +1,13 @@
-<header class="py-5 d-flex flex-column justify-content-center align-items-center">
-    <img src="../../assets/img/Janet.png" alt="" id="janetPrincipal">
-    <section class="d-flex flex-column justify-content-top align-items-center w-100 my-5" >
 
-        <div class="px-5 col-md-5 d-flex align-items-top justify-content-center ">
-            <div id="bolhaJanet" class=" d-flex align-items-right col-1">
-                <img src="../../assets/img/Janet.png" alt="" id="janetChat" class="col-3">
-            </div>
-            <div class=" col-8 sb2 box2 col-md-10 font-roboto mr-0 mt-0">Olá humano, me diga em que posso te ajudar.</div>
-        </div>
-
-        <div class="px-5 col-md-5 d-flex align-items-top justify-content-center">
-            <div class="sb1 box1 col-md-10 col-8 font-roboto mt-0 ml-0 mr-5">Roii, tem vacina?</div>
-            <div id="bolhaJanet"  class="d-flex align-items-left col-1">
-                <img src="../../assets/img/perfil-usuario/Avatar.png" alt="" id="janetChat" class="col-3">
-            </div>
-        </div>
-
-        </section>
-        <div class="col-10 col-md-4 form-group d-flex justify-content-center">
-            <input type="text" class="form-control input-estilo inputNome" id="nome" required>
-            <span class="linhaSpan"></span>
-            <label for="exampleInputNome" class="col-form-label">Digite sua mensagem</label>
-            <!-- <div class="position-absolute" style="top: 30px; right:44px;">
-                <small style="color: red; font-size: 10px;">O nome esta incorreto, minimo 3 caracteres</small>
-            </div> -->
-        </div>
-    </header>
+<header class="d-flex flex-column align-items-center my-5">
+    <div class="d-flex col-4 align-items-center">
+        <img src="../../assets/img/watson.png" alt="" id="janetPrincipal">
+        <p class="font-roboto font-25">PERGUNTE A <span class="texto-azul-verde negrito">JANET</span> SUAS DÚVIDAS SOBRE CORONA VÍRUS E A VACINA.</p>
+    </div>
+    <div class="chat-column">
+        <div id="chat"></div>
+        <label for="textInput" class="inputOutline">
+            <input id="textInput" class="input responsive-column" autofocus placeholder="Say something" type="text">
+        </label>
+    </div>
+</header>        
