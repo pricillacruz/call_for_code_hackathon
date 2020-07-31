@@ -22,11 +22,10 @@ export class NavComponent implements OnInit {
     
     linha10.style.transition = '3s!important';
     linha10.style.transform = "translateX(10px) translateY(10px) rotate(47deg)"
-    linha10.style.width = "39px";
 
     linha12.style.transition = '3s!important';
-    linha12.style.transform = "translateY(39px)translateX(10px) rotate(-47deg)"
-    linha12.style.width = "39px";
+    linha12.style.transform = "translateY(32px)translateX(10px) rotate(-47deg)"
+
 
   }
 

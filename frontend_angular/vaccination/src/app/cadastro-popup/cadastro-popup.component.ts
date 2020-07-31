@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AutenticarService } from '../service/autenticar.service';
 
 @Component({
   selector: 'app-cadastro-popup',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroPopupComponent implements OnInit {
 
-  constructor() { }
+  constructor(private auth: AutenticarService) { }
 
   ngOnInit(): void {
+  }
+
+  cadastrar(){
+    
   }
 
 }
