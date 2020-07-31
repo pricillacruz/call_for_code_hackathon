@@ -1,6 +1,7 @@
 package com.callForCode.vaccination.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.callForCode.vaccination.model.Usuario;
 import com.callForCode.vaccination.repository.UsuarioRepository;
+import com.callForCode.vaccination.service.UsuarioService;
 
 @RestController
 @RequestMapping("/usuario")
@@ -24,6 +26,9 @@ import com.callForCode.vaccination.repository.UsuarioRepository;
 public class UsuarioController {
 	@Autowired
 	private UsuarioRepository repository;
+	
+	@Autowired
+	private UsuarioService usuarioService;
 	
 	@GetMapping
 	public ResponseEntity<List<Usuario>> GetAll(){
@@ -59,7 +64,15 @@ public class UsuarioController {
 	
 	// Arrumar para login e cadastro
 	@PostMapping
-	public ResponseEntity<Usuario> post(@RequestBody Usuario usuario){
+	public ResponseEntity<Usuario> postusuario(@RequestBody Usuario usuario){
+		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(usuario));
+	}
+	@PostMapping("/logar")
+	public ResponseEntity<Usuario> Postlogar(@RequestBody Usuario usuario){
+		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(usuario));
+	}
+	@PostMapping("/cadastrar")
+	public ResponseEntity<Usuario> Post(@RequestBody Usuario usuario){
 		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(usuario));
 	}
 	

@@ -7,7 +7,8 @@ import { Usuario } from '../model/usuario';
   styleUrls: ['./perfil-usuario.component.css']
 })
 export class PerfilUsuarioComponent implements OnInit {
-  usuario = new Usuario
+
+  usuario: Usuario = new Usuario
   constructor() { }
 
   ngOnInit(): void {

@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-chatbot-faq',
   templateUrl: './chatbot-faq.component.html',
-  styleUrls: ['./chatbot-faq.component.css']
+  styleUrls: ['./chatbot-faq.component.css'],
+  encapsulation: ViewEncapsulation.None //colocado aqui pra atualizar o css sempre que um novo elemento é criado
 })
 export class ChatbotFaqComponent implements OnInit {
 

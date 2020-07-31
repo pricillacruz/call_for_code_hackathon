@@ -1,6 +1,9 @@
 header {
     height: 90vh;
 }
+div > p {
+    line-height: 3.25rem;
+}
 #iconePlaneta > svg {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;

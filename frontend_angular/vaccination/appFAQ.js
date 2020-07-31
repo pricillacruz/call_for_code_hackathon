@@ -22,16 +22,16 @@ const assistant = new AssistantV2({
     
     version: '2020-04-01',
     authenticator: new IamAuthenticator({
-        apikey: 'VAF4gpMVNf9btOYWEvc3Z6FWCcS0nxMg3kdMzLYLkuRa',
+        apikey: '1bqxd2UVXgRBbNlhCm1PCeddi19c9QZ4JeLTBkdojB3b',
     }),
-    url: 'https://api.us-south.assistant.watson.cloud.ibm.com/instances/d93582cd-b996-4c11-87de-ec72e66c53db',
+    url: 'https://api.us-south.assistant.watson.cloud.ibm.com/instances/28f0c996-47ce-4199-8934-09ed5c8514b5',
     disableSslVerification: true,
 });
 
 
 
 assistant.createSession({
-    assistantId: '3fda368d-7ba6-4db3-9dfd-183ad4e4948b'
+    assistantId: 'bd4952ac-115a-4413-b6dd-6c6ed5aeb972'
 })
 .then(res => {
     console.log(JSON.stringify(res.result, null, 2));
@@ -41,7 +41,7 @@ assistant.createSession({
     console.log(req.headers)
         const { text, context = {} } = req.body;
         const params = {
-            assistantId: '3fda368d-7ba6-4db3-9dfd-183ad4e4948b',
+            assistantId: 'bd4952ac-115a-4413-b6dd-6c6ed5aeb972',
             sessionId: session_id,
             input: {text} ,
             context,
@@ -64,7 +64,7 @@ assistant.createSession({
 // let bey = "Quero agendar vacinação"
 
 // assistant.message({
-//     assistantId: '3fda368d-7ba6-4db3-9dfd-183ad4e4948b',
+//     assistantId: 'bd4952ac-115a-4413-b6dd-6c6ed5aeb972',
 //     sessionId: '600d21a8-cc3b-4869-b71d-e82ca56e84bd',
 //     input: {
 //         'message_type': 'text',
