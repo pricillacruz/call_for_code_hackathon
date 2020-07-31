@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'admin', component: AdminComponent},
   { path: 'perfil-usuario', component: PerfilUsuarioComponent },
   { path: 'perfil-atendimento', component: PontoAtendimentoComponent },
-  { path: 'chatbot', component: ChatbotPageComponent }
+  { path: 'chatbot-faq', component: ChatbotPageComponent }
 ];
 
 @NgModule({

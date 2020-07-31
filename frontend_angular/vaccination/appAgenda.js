@@ -22,16 +22,16 @@ const assistant = new AssistantV2({
     
     version: '2020-04-01',
     authenticator: new IamAuthenticator({
-        apikey: 'sRUqGpANbyYcg2gCG5xnFB-MxNhSFppbkv-CNOTGdXIf',
+        apikey: 'VAF4gpMVNf9btOYWEvc3Z6FWCcS0nxMg3kdMzLYLkuRa',
     }),
-    url: 'https://api.us-south.assistant.watson.cloud.ibm.com/instances/39e064e8-d14b-4fc8-8543-9ca472959b7d',
+    url: 'https://api.us-south.assistant.watson.cloud.ibm.com/instances/d93582cd-b996-4c11-87de-ec72e66c53db',
     disableSslVerification: true,
 });
 
 
 
 assistant.createSession({
-    assistantId: 'd46d5729-7a2a-4a08-aa85-9045c1366d7a'
+    assistantId: '3fda368d-7ba6-4db3-9dfd-183ad4e4948b'
 })
 .then(res => {
     console.log(JSON.stringify(res.result, null, 2));
@@ -41,7 +41,7 @@ assistant.createSession({
     console.log(req.headers)
         const { text, context = {} } = req.body;
         const params = {
-            assistantId: 'd46d5729-7a2a-4a08-aa85-9045c1366d7a',
+            assistantId: '3fda368d-7ba6-4db3-9dfd-183ad4e4948b',
             sessionId: session_id,
             input: {text} ,
             context,
