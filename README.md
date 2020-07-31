@@ -18,8 +18,10 @@ você pode escolher o dia, a hora e o local que é melhor para você em adição
 servir a população de São Paulo mas pode ser expandido para outros países.
 
 <p align="center">
-<img alt="web version of project" src="https://i.imgur.com/YebV7b7.jpg"/>
-<img alt="web version of project" src="https://i.imgur.com/hnXe5ih.jpg"/>
+<img style="width= 18rem" alt="web version of project" src="https://i.imgur.com/YebV7b7.jpg"/>
+<img style="width= 18rem" alt="Mobile version of project" src="https://i.imgur.com/hnXe5ih.jpg"/>
+<img style="width= 18rem" alt="Mobile version of project" src="https://i.imgur.com/6tOvlb9.jpg"/>
+<img style="width= 18rem" alt="Mobile version of project" src="https://i.imgur.com/KhpAxPV.jpg"/>
 </p>
 
 <p align="center">
