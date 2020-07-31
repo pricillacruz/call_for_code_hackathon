@@ -8,7 +8,7 @@
             <div class="modal-body" style="padding: 63px;">
         
                 <div class="form-group d-flex justify-content-center">
-                    <input type="text" class="form-control input-estilo" required>
+                    <input type="text" [(ngModel)]="userLogin.email" class="form-control input-estilo" required>
                     <span class="linhaSpan"></span>
                     <label for="exampleInputNome" class="col-form-label">Email</label>
                     <!-- <div class="position-absolute" style="top: 30px; right:44px;">
@@ -17,7 +17,7 @@
                 </div>
                 
                 <div class="form-group d-flex mb-0 justify-content-center">
-                    <input type="password" class="form-control input-estilo" required>
+                    <input type="password" [(ngModel)]="userLogin.senha" class="form-control input-estilo" required>
                     <span class="linhaSpan"></span>
                     <label for="exampleInputNome" class="col-form-label">Senha</label>
                     <!-- <div class="position-absolute" style="top: 30px; right:44px;">
