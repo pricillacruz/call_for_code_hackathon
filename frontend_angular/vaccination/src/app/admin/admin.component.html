@@ -1,18 +1,5 @@
 <header>
     <!-- Foto de perfil -->
-    <article class="mb-5" style="height: 11em;">
-        <div id="poligono">
-        </div>
-        <article class="d-flex justify-content-center" style="bottom: 158px; height: 5%;">
-            <div class=" mt-4 rounded-circle  fotoInicial imgPerfil"
-                style="background-color: #d6d6d6; width: 180px; height: 180px;">
-                <div class="position-relative div-container-btneditar">
-                    <div class="position-relative btnEditarFoto ">
-                        <!-- ======== Botão para editar a foto de perfil ======== -->
-                        <div class="rounded-circle btnImgEditar d-flex justify-content-center align-items-center"
-                            style="background-color: #449988; width: 30px; height: 30px;"
-                            aria-labelledby="exampleModalCenterTitle" data-toggle="modal" data-target="#popupFoto"
-                            data-whatever="@mdo">
 
     <article class="mb-5" style="height: 20em;">
         <svg class="w-100" style="height: auto;" height="207" viewBox="0 0 1440 207" fill="none"
@@ -45,10 +32,7 @@
         </div>
         <hr class="mt-5 w-50">
     </article>
-    <!-- Nome -->
 
-    <h5 style="margin-top: 62px;" class="text-dark font-roboto text-center">Aloy gray</h5>
-    <hr class="mt-5 w-50">
 </header>
 
 <!-- Container -->
@@ -71,7 +55,7 @@
                 </div> -->
             </div>
             <div class="form-group d-flex justify-content-center">
-                <input type="text" class="form-control input-estilo " required>
+                <input type="text" [(ngModel)]="usuario.email" class="form-control input-estilo " required>
                 <span class="linhaSpan"></span>
                 <label for="" class="col-form-label">Email</label>
                 <!-- <div class="position-absolute" style="top: 30px; right:44px;">
@@ -80,18 +64,18 @@
             </div>
             <div class="d-flex mb-0 justify-content-center form-group w-100">
                 <div class="form-group w-50 d-flex justify-content-end mr-2">
-                    <input type="text" class="form-control input-estilo " mask="(00) 00000-0000" required>
+                    <input type="text" [(ngModel)]="usuario.cep" class="form-control input-estilo " mask="(00) 00000-0000" required>
                     <span class="linhaSpan"></span>
                     <label class="col-form-label">CEP</label>
                 </div>
                 <div class="form-group w-50 d-flex justify-content-start">
-                    <input type="text" class="form-control input-estilo  " mask="00000-000" required>
+                    <input type="text" class="form-control input-estilo" [(ngModel)]="usuario.datanascimento" mask="00000-000" required>
                     <span class="linhaSpan"></span>
                     <label class="col-form-label" style="left: 10px;">Data de nascimento</label>
                 </div>
             </div>
             <div class="form-group d-flex justify-content-center">
-                <input type="text" class="form-control input-estilo" required>
+                <input type="text" class="form-control input-estilo" [(ngModel)]="usuario.endereco" required>
                 <span class="linhaSpan"></span>
                 <label for="" class="col-form-label">Endereço</label>
                 <!-- <div class="position-absolute" style="top: 30px; right:44px;">
