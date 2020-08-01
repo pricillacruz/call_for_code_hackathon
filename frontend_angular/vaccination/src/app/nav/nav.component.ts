@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  abrirModalLogin:boolean = false
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -28,5 +30,12 @@ export class NavComponent implements OnInit {
 
 
   }
+
+
+  // sair(){
+  //   this.router.navigate(['/home'])
+  //   localStorage.clear()
+  //   this.abrirModalLogin = true
+  // }
 
 }

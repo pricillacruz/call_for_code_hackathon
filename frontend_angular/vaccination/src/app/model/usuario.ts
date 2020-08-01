@@ -9,7 +9,7 @@ export class Usuario {
     public telefone:string
     public endereco:string
     public datanascimento:Date
-    public numeroendereco:string
+    public numeroEndereco:string
     public bairro:string
     public cep:string
     public imagem:string

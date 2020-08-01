@@ -1,4 +1,4 @@
-<div class="modal fade" id="cadastroModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="cadastroModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content modalDesign">
@@ -30,7 +30,7 @@
                     <small style="color: red; font-size: 10px;">O nome esta incorreto, minimo 3 caracteres</small>
                 </div> -->
                 </div>
-                <div class="form-group d-flex mb-0 justify-content-center">
+                <div class="form-group d-flex justify-content-center">
                     <input type="password" (input)='conferirSenha($event)' value="{{senha}}" class="form-control input-estilo" required>
                     <span class="linhaSpan"></span>
                     <label for="exampleInputNome" class="col-form-label">Senha</label>
@@ -54,7 +54,7 @@
 
     <!-- === Botão cadastrar === -->
                 <div class="d-flex justify-content-center mx-5">
-                    <button (click)="cadastrar()" class="btn rounded-0 text-light w-100" style="background-color: black; height: 50px;">Cadastrar</button>
+                    <button (click)="cadastrar()" class="btn rounded-0 text-light w-100 btnCadastrar" style="background-color: black; height: 50px;">Cadastrar</button>
                 </div>
             </div>
         </div>
