@@ -1,0 +1,338 @@
+/* * {
+    margin: 0px;
+    padding: 0px;
+} */
+
+header {
+    /* height: 90vh; */
+}
+
+/* .box1 {
+    width: 300px;
+    margin: 50px auto;
+    background: #B4E2D9;
+    padding: 20px;
+    text-align: center;
+    font-weight: 900;
+    color: #000;
+    font-family: arial;
+    position: relative;
+    border-radius: 8px;
+}
+.box2 {
+    width: 300px;
+    margin: 50px auto;
+    background: #449281;
+    padding: 20px;
+    text-align: center;
+    font-weight: 900;
+    color: #fff;
+    font-family: arial;
+    position: relative;
+    border-radius: 8px;
+}
+.sb1:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid #B4E2D9;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #B4E2D9;
+    border-bottom: 10px solid transparent;
+    
+    right: -19px;
+    top: 6px;
+}
+
+.sb2:before {
+    content: "";
+    width: 0px;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid #449281;
+    border-top: 10px solid #449281;
+    border-bottom: 10px solid transparent;
+    
+    left: -19px;
+    top: 6px;
+    height: 0;
+}
+
+#janetPrincipal {
+    height: 250px;
+    width: auto;
+}
+
+#bolhaJanet {
+    max-height: 80px;
+    width: auto;
+    min-height: 64px;
+}
+
+#janetChat {
+    height: auto;
+    width: auto;
+    max-height: 64px;
+    min-width: 64px;
+}
+
+/* ============================ Estilo e posicionamento do label dentro do input */
+/* label{
+    position: absolute;
+    top: -3px!important;
+    left: 60px;
+    padding: 10px 0;
+    font-size: 16px!important;
+    color: #949191!important;
+    pointer-events: none;
+    font-weight: 100;
+    transition: .2s ease all;
+}   */
+/* =========================== Tamanho do Popup*/
+/* .tamanhoPopupWidth{
+    max-width: 933px!important;
+} */
+/* .tamanhoPopupHeight{
+    height: 615px!important;
+} */
+/* .form-group{
+    margin-bottom: 2rem;
+    position: relative;
+} */
+/* ======================== estilo dos <input> */
+/* .input-estilo{
+    border-top-right-radius: 2.5px;
+    border-top-left-radius: 2.5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-color: transparent;
+    background-color: #FCFCFC;
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid #cccbcb;
+}    */
+/* ======================== Eventos do <input> */
+/* .input-estilo:focus{
+    box-shadow: 0 0 0 0 transparent;
+    border-bottom: 0.5px solid transparent!important;
+} */
+/* .input-estilo:focus ~ label, .input-estilo:valid ~ label{ /* posicionamento do label em cima do input
+    top: -30px!important;
+    left: 50px;
+    font-size: 13px!important;
+    font-style: normal;
+    font-weight: 500;
+    color: #98cabe!important;
+}
+/* ========================  Estilo do <span>
+.linhaSpan{ /* tamanho e posição do span que é uma linha 
+    position: absolute;
+    display: block;
+    width: 80%; 
+    bottom: 1px; 
+}
+.linhaSpan:before, .linhaSpan:after{cor da linha antes e depois com uma duração de 2 segundos */
+    /* content: '';
+    height: 2px;
+    bottom: 0px;
+    width: 0;
+    position: absolute;
+    transition: .2s ease all;
+    background: #98cabe;
+}
+ .input-estilo:focus ~ .linhaSpan:after {Tamanho da linha quando em foco e depois */
+    /* width:100%;
+}  */ 
+
+
+
+
+
+
+
+
+header {
+    /* max-height: 90vh; */
+}
+
+#janetPrincipal {
+    height: 150px;
+    width: auto;
+}
+
+#watsonChat {
+    height: auto;
+    width: auto;
+    min-width: 64px;
+}
+#userChat {
+    height: auto;
+    width: auto;
+    min-width: 64px;
+    order: 3;
+}
+
+.inneruser {
+    flex: 0 0 58.333333% !important;
+    max-width: 58.333333% !important;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+div {
+    word-wrap: break-word;
+    line-height: 1.25rem;
+}
+
+.chat-column {
+    height: 100%;
+    padding: 0.9375rem 0 0.625rem 0;
+    margin: auto;
+    text-align: left;
+    max-width: 25rem;
+    min-width: 9.375rem;
+}
+
+#chat {
+    margin: 0.75rem;
+    /* overflow-y: auto ; */
+    overflow-x: hidden;
+    overflow-y:scroll;
+    height: 50vh;
+    overscroll-behavior-y: contain;
+    scroll-snap-type: y mandatory;
+}
+#chat > div:last-child {
+    scroll-snap-align: end; /* todas as coisas relacionadas a snap tem a ver com a posição do scroll */
+
+}
+.message-inner {
+    opacity: 0;
+    opacity: 1;
+    margin-top: 0.9375rem;
+}
+
+.from-user {
+    text-align: right;
+}
+
+.from-user .message-inner {
+    position: relative;
+    font-size: 1rem;
+    color: #fff;
+    letter-spacing: 0.015rem;
+    line-height: 1.3125rem;
+    background: #449281;
+    border-radius: 1.25rem;
+    border-bottom-right-radius: 0;
+    text-align: left;
+    display: inline-block;
+    margin-left: 2.5rem;
+    min-width: 2.5rem;
+}
+
+.from-user .message-inner p {
+    margin: 0.3125rem;
+    padding: 0 0.9375rem;
+}
+
+.from-user .message-inner:before, .from-user .message-inner:after {
+    content: "";
+    position: absolute;
+}
+
+.from-user .message-inner:before {
+    z-index: -2;
+    bottom: -0.375rem;
+    right: 0;
+    height: 0.375rem;
+    width: 0.5rem;
+    background: #449281;
+}
+
+.from-user .message-inner:after {
+    z-index: -1;
+    bottom: -0.5rem;
+    right: 0;
+    height: 0.5rem;
+    width: 0.5rem;
+    background: #fff;
+    border-top-right-radius: 1.25rem;
+}
+
+.from-watson .message-inner {
+    position: relative;
+    border-radius: 1.5625rem;
+    font-size: 1rem;
+    color: #323232;
+    letter-spacing: 0.015rem;
+    line-height: 1.3125rem;
+}
+
+.from-watson p {
+    margin: 0.3125rem;
+    padding: 0 1.25rem;
+}
+
+.from-watson p:before {
+    content: "";
+    background: #BAE2D9;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 2;
+    left: 0.4375rem;
+    width: 0.3125rem;
+    height: 1.3125rem;
+    line-height: 1.3125rem;
+}
+
+#textInput {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    color: #323232;
+    letter-spacing: 0.015rem;
+    line-height: 1.3125rem;
+    height: 2.5rem;
+    width: 100%;
+    padding-left: 0.125rem;
+    margin-bottom: -0.125rem;
+    overflow: auto;
+}
+
+.inputOutline {
+    display: block;
+    border-bottom: 0.0625rem solid #aeaeae;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 14px;
+    }
+
+    .chat-column {
+        padding-top: 4rem;
+    }
+}

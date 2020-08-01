@@ -22,7 +22,7 @@ public class Usuario {
 	@Column(name = "id_usuario")
 	private long id;
 
-	@Column(name = "nome_usuario", nullable = false)
+	@Column(name = "nome_usuario", nullable = true)
 	@Size(min = 5, max = 100)
 	private String nome;
 

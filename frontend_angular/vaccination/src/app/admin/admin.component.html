@@ -19,18 +19,7 @@
                         </div>                          
                  </div>
             </div>
-        
-
-
         </article>
-
-
-        <!-- Nome -->
-
-        <div style="height: 30px; width: 100%;">
-            <h5 style="margin-top: 62px;" class="text-dark font-roboto text-center">{{usuario.nome}}</h5>
-        </div>
-        <hr class="mt-5 w-50">
     </article>
 
 </header>
@@ -82,14 +71,14 @@
                     <small style="color: red; font-size: 10px;">O nome esta incorreto, minimo 3 caracteres</small>
                 </div> -->
             </div>
-
+            
             <!-- === Botão salvar === -->
             <div class="d-flex justify-content-center mx-5">
                 <button class="btn text-light w-100" style="background-color: black; height: 50px;">Salvar</button>
             </div>
         </div>
-
-<!-- === Dashboard === -->
+        
+        <!-- === Dashboard === -->
         <div class="col-md-6">
             <div class="d-flex ml-4" style="margin: 95px 0 0 0;">
                 <div  id="iconeDashboard" style="padding-left: 83px;" class="mb-5">
@@ -102,7 +91,7 @@
                     <div class="dashboard mr-4">
                         <div class="p-2 d-flex mb-3">
                             <img style="width: 20px; height: 20px;" src="../../assets/img/admin/silhueta-de-usuario.svg"
-                                alt="">
+                            alt="">
                             <p class="pl-2 mb-0 font-roboto" style="font-size: 12px; color:#696868">Usuários</p>
                         </div>
                         <div class="d-flex justify-content-center w-100 align-items-center">
@@ -135,7 +124,7 @@
                     <div class="dashboard">
                         <div class="p-2 d-flex mb-3">
                             <img style="width: 20px; height: 20px;" src="../../assets/img/admin/navegacao (1).svg"
-                                alt="">
+                            alt="">
                             <p class="pl-2 mb-0 font-roboto" style="font-size: 12px; color:#696868">Pontos</p>
                         </div>
                         <div class="d-flex justify-content-center w-100 align-items-center">
@@ -147,9 +136,9 @@
             </div>
         </div>
     </div>
-
-
-<!-- Adicionar ponto de atendimento -->
+    
+    
+    <!-- Adicionar ponto de atendimento -->
     <div class="row sessaoPontodeAtendimento">
         <div class="col-md-6">
             <div class="d-flex ml-4 iconeAdicionar" style="margin: 95px 0 0 0;">
@@ -158,10 +147,10 @@
                 </div>
                 <h4 class="ml-3" style="font-weight: 400; color:#696868">Adicionar pontos de
                     atendimentos</h4>
-            </div>
-            <div class="d-flex dropResponsive pl-4 mb-5 ml-3 justify-content-start w-100 form-group">
-                <div class="dropdown">
-                    <button class="btn btn-light dropdown-toggle mr-4" type="button" id="dropdownMenuButton"
+                </div>
+                <div class="d-flex dropResponsive pl-4 mb-5 ml-3 justify-content-start w-100 form-group">
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle mr-4" type="button" id="dropdownMenuButton"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Estado
                         <img src="../../assets/img/admin/Vector.svg" alt="" style="width: 10px; margin-left: 10px;">
@@ -172,23 +161,19 @@
                 </div>
                 <div class="dropdown">
                     <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton2"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Cidade
-                        <img src="../../assets/img/admin/Vector.svg" alt="" style="width: 10px; margin-left: 10px;">
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                        <a class="dropdown-item">São paulo</a>
-
-                    </div>
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Cidade
+                    <img src="../../assets/img/admin/Vector.svg" alt="" style="width: 10px; margin-left: 10px;">
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                    <a class="dropdown-item">São paulo</a>
+                    
                 </div>
             </div>
             <div class="form-group d-flex justify-content-center">
                 <input type="text" [(ngModel)]="pontoAtendimento.nome" class="form-control input-estilo inputNome" required>
                 <span class="linhaSpan"></span>
-                <label for="exampleInputNome" class="col-form-label">Nome</label>
-                <!-- <div class="position-absolute" style="top: 30px; right:44px;">
-                    <small style="color: red; font-size: 10px;">O nome esta incorreto, minimo 3 caracteres</small>
-                </div> -->
+                <label class="col-form-label">Endereço</label>
             </div>
             <div class="d-flex mb-0 justify-content-center form-group w-100">
                 <div class="form-group w-50 d-flex justify-content-end mr-2">
@@ -231,21 +216,36 @@
         </div>
     </div>
 </div>
+</div>
 
 <svg style="height: auto;" viewBox="0 0 1440 207" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 207L1441 -5.84126e-06V207L0 207Z" fill="#BAE2D9"/>
 </svg>
-    
+
 <!-- ========= Modal para editar a foto de perfil ============ -->
 <main class="modal fade" id="popupFoto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered justify-content-center" style="max-width: 40em!important; margin: 5.75rem auto!important;">
-      <div class="modal-content" style=" width: 35em; height: 27em;">
-        <div class="modal-body">
-          <div class="d-block">
-            <div class="d-flex justify-content-center" style="font-weight: 100;">
-              <div class="imgPerfil position-absolute mt-4 rounded-circle" style="background-color: #efefef; width: 200px; height: 200px;bottom: 203px" >
-                <img src="{{usuario.imagem}}" class=" imagemUsuario w-100 h-100 rounded-circle" alt="" style="object-fit: cover;">
-              </div>
+        <div class="modal-content" style=" width: 35em; height: 27em;">
+            <div class="modal-body">
+                <div class="d-block">
+                    <div class="d-flex justify-content-center" style="font-weight: 100;">
+                        <div class="imgPerfil position-absolute mt-4 rounded-circle" style="background-color: #efefef; width: 200px; height: 200px;bottom: 203px" >
+                            <img src="{{usuario.imagem}}" class=" imagemUsuario w-100 h-100 rounded-circle" alt="" style="object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+                
+                <h6 class="mt-5 text-center" style="margin-top: 9em!important; color: gray;">Coloque a Url para atualizar a sua foto de perfil</h6>
+                <div class="form-group d-flex justify-content-center" style="margin-top: 3em!important;">
+                    <input type="text" class="form-control input-estilo" id="urlImagem" [(ngModel)]='usuario.imagem' required>
+                    <span class="linhaSpan"></span>
+                    <label class="col-form-label">Url</label>
+                </div>
+            </div>
+            
+            <div class="d-flex justify-content-center mt-3 mb-5">
+                <button type="button" class="btn px-3 py-2 mr-5 text-light rounded" style="background-color: rgb(190, 190, 190); border-radius: 1px; width: 170px;" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn text-light py-2" style="background-color: #449988; width: 30%;"  data-dismiss="modal">Salvar</button>
             </div>
           </div>
           
@@ -261,6 +261,5 @@
           <button type="button" class="btn px-3 py-2 mr-5 text-light rounded" style="background-color: rgb(190, 190, 190); border-radius: 1px; width: 170px;" data-dismiss="modal">Cancelar</button>
           <button type="button" class="btn text-light py-2" style="background-color: #449988; width: 30%;"  data-dismiss="modal">Salvar</button>
         </div>
-      </div>
     </div>
-  </main>
+</main>

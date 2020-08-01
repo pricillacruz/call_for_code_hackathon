@@ -11,8 +11,11 @@ import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.componen
 import { PontoAtendimentoComponent } from './ponto-atendimento/ponto-atendimento.component';
 import { CadastroPopupComponent } from './cadastro-popup/cadastro-popup.component';
 import { LoginPopupComponent } from './login-popup/login-popup.component';
+import { ChatbotPageComponent } from './chatbot-page/chatbot-page.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { ChatbotFaqComponent } from './chatbot-faq/chatbot-faq.component';
+import { ChatbotAgendaComponent } from './chatbot-agenda/chatbot-agenda.component'
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { FormsModule } from '@angular/forms'
     PerfilUsuarioComponent,
     PontoAtendimentoComponent,
     CadastroPopupComponent,
-    LoginPopupComponent
+    LoginPopupComponent,
+    ChatbotPageComponent,
+    ChatbotFaqComponent,
+    ChatbotAgendaComponent
   ],
   imports: [
     BrowserModule,
