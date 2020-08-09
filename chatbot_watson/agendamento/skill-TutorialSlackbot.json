@@ -1,0 +1,858 @@
+{
+  "intents": [
+    {
+      "intent": "consultarAgendamentos",
+      "examples": [
+        {
+          "text": "Procurar agendamento"
+        },
+        {
+          "text": "Já marquei vacina?"
+        },
+        {
+          "text": "Buscar agendamento"
+        },
+        {
+          "text": "Consultar agendamento"
+        },
+        {
+          "text": "Busca agendamento"
+        },
+        {
+          "text": "Pesquisar agendamento"
+        },
+        {
+          "text": "Pesquisa"
+        },
+        {
+          "text": "Ver agendamento"
+        },
+        {
+          "text": "Quero consultar os agendamentos"
+        },
+        {
+          "text": "Há agendamentos feitos?"
+        },
+        {
+          "text": "Quais os agendamentos até o momento?"
+        },
+        {
+          "text": "Quero ver os agendamentos"
+        }
+      ],
+      "description": "Mostrará agendamentos já realizados"
+    },
+    {
+      "intent": "novoAgendamento",
+      "examples": [
+        {
+          "text": "Como faço para agendar?"
+        },
+        {
+          "text": "Quero fazer um agendamento"
+        },
+        {
+          "text": "Gostaria de agendar"
+        },
+        {
+          "text": "Como me vacinar?"
+        },
+        {
+          "text": "Novo agendamento"
+        },
+        {
+          "text": "Criar agendamento"
+        },
+        {
+          "text": "Quero tomar a vacina"
+        }
+      ],
+      "description": "Pedido de novos agendamentos"
+    }
+  ],
+  "entities": [
+    {
+      "entity": "confirmacao",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "sim",
+          "synonyms": [
+            "ok",
+            "confirmado",
+            "certo",
+            "correto",
+            "com certeza",
+            "isso mesmo",
+            "combinado",
+            "é isso"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "nao",
+          "synonyms": [
+            "não",
+            "cancelar",
+            "desfazer",
+            "voltar",
+            "sair"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "tipoconsulta",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "date",
+          "synonyms": [
+            "dia",
+            "hora",
+            "mês",
+            "quando",
+            "data"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "identifier",
+          "synonyms": [
+            "nome",
+            "local",
+            "posto",
+            "unidade",
+            "atendimento",
+            "hospital",
+            "onde"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-date",
+      "values": []
+    },
+    {
+      "entity": "nomeunidade",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "unidade",
+          "patterns": [
+            "[\"„“][A-Za-z0-9.:| @\\']+[\"”“]"
+          ]
+        }
+      ]
+    },
+    {
+      "entity": "sys-time",
+      "values": []
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "webhooks": [
+    {
+      "url": "https://us-south.functions.appdomain.cloud/api/v1/web/dcd941ce-0d73-473e-ae61-d00e331f895d/slackdemo/dispatch.json",
+      "name": "main_webhook",
+      "headers": [
+        {
+          "name": "X-Require-Whisk-Auth",
+          "value": "SEGREDO"
+        }
+      ]
+    }
+  ],
+  "dialog_nodes": [
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Em qual data sua vacina foi agendada?<br>Para cancelar pesquisa, digite \"cancelar\"."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_23_1517406154633",
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_25_1517406154633",
+      "previous_sibling": "handler_24_1517406154633"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_23_1517406154633",
+      "context": {
+        "dataagendamento": "@sys-date"
+      },
+      "metadata": {},
+      "conditions": "@sys-date",
+      "event_name": "input",
+      "dialog_node": "handler_24_1517406154633"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Podemos confirmar o agendamento?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_7_1596132282672",
+      "event_name": "focus",
+      "dialog_node": "handler_7_1596132282676",
+      "previous_sibling": "handler_9_1596132282676"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_7_1596132282672",
+      "context": {
+        "confirmacao_sim": "@confirmacao:sim"
+      },
+      "conditions": "@confirmacao:sim",
+      "event_name": "input",
+      "dialog_node": "handler_9_1596132282676"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Certo! Em <? $dataagendamento ?>, qual será o horário do agendamento?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_42_1517317182143",
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_44_1517317182143",
+      "previous_sibling": "handler_43_1517317182143"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_42_1517317182143",
+      "context": {
+        "horario": "@sys-time"
+      },
+      "metadata": {},
+      "conditions": "@sys-time",
+      "event_name": "input",
+      "dialog_node": "handler_43_1517317182143"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "node_16_1517405116504",
+      "disabled": true,
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_19_1517405919417",
+      "previous_sibling": "slot_20_1517405919423"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_16_1517405116504",
+      "metadata": {},
+      "variable": "$tipoconsulta",
+      "dialog_node": "slot_20_1517405919423",
+      "previous_sibling": "node_9_1517403528441"
+    },
+    {
+      "type": "frame",
+      "title": "Consulta pela data",
+      "output": {},
+      "parent": "node_16_1517405116504",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "actionname": "searchByDates",
+            "eventdates": "<? $dataagendamento ?>"
+          },
+          "result_variable": "webhook_byDates"
+        }
+      ],
+      "metadata": {
+        "fallback": "leave",
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1596133289675"
+      },
+      "conditions": "$tipoconsulta:date",
+      "dialog_node": "node_9_1517403528441",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_1_1516878960414",
+      "digress_out_slots": "allow_all"
+    },
+    {
+      "type": "frame",
+      "title": "Consulta pelo nome",
+      "output": {},
+      "parent": "node_16_1517405116504",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "eventname": "<? $nomeunidade.substring(1,$nomeunidade.length()-1) ?>",
+            "actionname": "searchByName"
+          },
+          "result_variable": "webhook_byName"
+        }
+      ],
+      "metadata": {
+        "fallback": "leave",
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1596133289675"
+      },
+      "conditions": "$tipoconsulta:identifier",
+      "dialog_node": "node_1_1516878960414",
+      "digress_out": "allow_all",
+      "digress_out_slots": "allow_all"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_46_1517321324912",
+      "context": {
+        "nomeunidade": "@nomeunidade.literal"
+      },
+      "metadata": {},
+      "conditions": "@nomeunidade.literal",
+      "event_name": "input",
+      "dialog_node": "handler_47_1517321324912",
+      "previous_sibling": "handler_48_1517321324912"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Qual a unidade de atendimento?<br>(Por favor, digite o nome entre aspas)<br>Para cancelar pesquisa, digite \"cancelar\"."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_46_1517321324912",
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_48_1517321324912"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Tell me about the start date and in which city it is. Do you have a URI for that event?",
+            "For which city? And on what date does it start?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1517301749575",
+      "disabled": true,
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_2_1517301789512",
+      "previous_sibling": "response_4_1575996016324"
+    },
+    {
+      "type": "slot",
+      "parent": "node_1_1517301749575",
+      "variable": "$confirmacao_sim",
+      "dialog_node": "slot_7_1596132282672",
+      "previous_sibling": "slot_42_1517317182143"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Agendamento realizado com sucesso:<br>Unidade de atendimento: <? $nomeunidade.substring(1,$nomeunidade.length()-1) ?><br>Data agendada: <? $dataagendamento ?> <br>Horário agendado:  <? $horario ?>"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1517301749575",
+      "context": {},
+      "conditions": "$webhook_insert",
+      "dialog_node": "response_3_1575996015221",
+      "previous_sibling": "handler_2_1517582351537"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1517301749575",
+      "metadata": {},
+      "variable": "$nomeunidade",
+      "dialog_node": "slot_2_1517392218999",
+      "previous_sibling": "handler_2_1517301789512"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1517301749575",
+      "metadata": {},
+      "variable": "$dataagendamento",
+      "dialog_node": "slot_6_1517301823167",
+      "previous_sibling": "slot_2_1517392218999"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok, o agendamento não foi efetuado"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1517301749575",
+      "conditions": "@confirmacao:nao",
+      "dialog_node": "response_4_1575996016324",
+      "previous_sibling": "response_3_1575996015221"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1517301749575",
+      "metadata": {},
+      "variable": "$horario",
+      "dialog_node": "slot_42_1517317182143",
+      "previous_sibling": "slot_6_1517301823167"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "ok, exiting"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1517301749575",
+      "next_step": {
+        "behavior": "skip_all_slots"
+      },
+      "conditions": "#Bot_Control_Start_Over",
+      "event_name": "generic",
+      "dialog_node": "handler_2_1517582351537"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Em qual unidade de atendimento você  gostaria de realizar o agendamento?<br>Por favor, insira o nome da unidade entre aspas."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_2_1517392218999",
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_4_1517392218999",
+      "previous_sibling": "handler_3_1517392218999"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1517392218999",
+      "context": {
+        "nomeunidade": "@nomeunidade.literal"
+      },
+      "metadata": {},
+      "conditions": "@nomeunidade.literal",
+      "event_name": "input",
+      "dialog_node": "handler_3_1517392218999"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Você quer buscar o agendamento pelo nome da unidade de atendimento ou pela data?<br>Caso queira cancelar a busca, escolha alguma das opções e, na próxima mensagem, me envie \"cancelar\"."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_20_1517405919423",
+      "event_name": "focus",
+      "dialog_node": "handler_22_1517405919423",
+      "previous_sibling": "handler_21_1517405919423"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            ""
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_20_1517405919423",
+      "next_step": {
+        "behavior": "skip_all_slots"
+      },
+      "conditions": "@confirmacao:nao",
+      "event_name": "filled",
+      "dialog_node": "handler_4_1596134434116",
+      "previous_sibling": "handler_22_1517405919423"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_20_1517405919423",
+      "context": {
+        "tipoconsulta": "@tipoconsulta"
+      },
+      "conditions": "@tipoconsulta",
+      "event_name": "input",
+      "dialog_node": "handler_21_1517405919423"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Aqui está:<br><? $webhook_byDates.result ?>"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1517403528441",
+      "context": {
+        "eventdates": null
+      },
+      "metadata": {},
+      "conditions": "$webhook_byDates",
+      "dialog_node": "node_15_1517403528453",
+      "previous_sibling": "slot_23_1517406154633"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1517403528441",
+      "conditions": "anything_else",
+      "dialog_node": "response_2_1575995997660",
+      "previous_sibling": "node_15_1517403528453"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "What is the short name of that conference or event?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1517403528441",
+      "disabled": true,
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_14_1517403528453",
+      "previous_sibling": "response_2_1575995997660"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_9_1517403528441",
+      "metadata": {},
+      "variable": "$dataagendamento",
+      "dialog_node": "slot_23_1517406154633"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1516878960414",
+      "metadata": {},
+      "variable": "$nomeunidade",
+      "dialog_node": "slot_46_1517321324912",
+      "previous_sibling": "handler_45_1517321324900"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "What is the short name of that conference or event?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1516878960414",
+      "disabled": true,
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_45_1517321324900",
+      "previous_sibling": "response_7_1575995991156"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1516878960414",
+      "conditions": "anything_else",
+      "dialog_node": "response_7_1575995991156",
+      "previous_sibling": "node_3_1516880577327"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Aqui está:<br><? $webhook_byName.result ?>"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1516878960414",
+      "context": {},
+      "metadata": {},
+      "conditions": "$webhook_byName",
+      "dialog_node": "node_3_1516880577327"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1517301823167",
+      "context": {
+        "dataagendamento": "@sys-date"
+      },
+      "metadata": {},
+      "conditions": "@sys-date",
+      "event_name": "input",
+      "dialog_node": "handler_7_1517301823167",
+      "previous_sibling": "handler_8_1517301823167"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Qual a data do agendamento?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_6_1517301823167",
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_8_1517301823167"
+    },
+    {
+      "type": "standard",
+      "title": "Em Outros Casos",
+      "output": {
+        "text": {
+          "values": [
+            "Olá!<br>Eu sou Janet e estou aqui para te ajudar a agendar sua vacina ou consutar seu agendamento.<br>O que você gostaria de fazer?",
+            "Vamos tentar novamente.",
+            "Ainda não entendi."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_9_1596073119921"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_6_1596133289675"
+    },
+    {
+      "type": "standard",
+      "title": "Cancelar",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok, a operação foi cancelada"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "context": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1596133289675"
+      },
+      "conditions": "@confirmacao:(nao)",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_6_1596132989980",
+      "previous_sibling": "node_16_1517405116504"
+    },
+    {
+      "type": "frame",
+      "title": "Consultar Agendamentos",
+      "metadata": {},
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "#consultarAgendamentos",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_16_1517405116504",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_1_1517301749575"
+    },
+    {
+      "type": "frame",
+      "title": "Novo Agendamento",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "actionname": "insert",
+            "eventValues": "<? $nomeunidade.substring(1,$nomeunidade.length()-1) ?>,<? $dataagendamento ?>,<? $horario ?>"
+          },
+          "result_variable": "webhook_insert"
+        }
+      ],
+      "metadata": {
+        "fallback": "leave",
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1596133289675"
+      },
+      "conditions": "#novoAgendamento",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_1_1517301749575",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_9_1596073119921",
+      "digress_out_slots": "allow_all"
+    },
+    {
+      "type": "standard",
+      "title": "Zerar Variáveis",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "context": {
+        "horario": null,
+        "nomeunidade": null,
+        "tipoconsulta": null,
+        "confirmacao_nao": null,
+        "confirmacao_sim": null,
+        "dataagendamento": null
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_9_1596073119921"
+      },
+      "conditions": "false",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_6_1596133289675",
+      "previous_sibling": "node_6_1596132989980"
+    },
+    {
+      "type": "standard",
+      "title": "Bem-Vindo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá!<br>Eu sou Janet e estou aqui para te ajudar a agendar sua vacina ou consultar seu agendamento.<br>O que você gostaria de fazer?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_9_1596073119921"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "tooling": {
+      "store_generic_responses": true
+    }
+  },
+  "learning_opt_out": false,
+  "name": "TutorialSlackbot",
+  "language": "pt-br",
+  "description": "A slackbot"
+}
